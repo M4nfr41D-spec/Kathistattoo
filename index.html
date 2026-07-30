@@ -27,7 +27,7 @@
       --patina-img:url("assets/patina.webp");
     }
     *{box-sizing:border-box}
-    html{scroll-behavior:smooth;background:var(--bg)}
+    html{scroll-behavior:smooth;background:var(--bg);-webkit-text-size-adjust:100%;text-size-adjust:100%}
     body{
       margin:0;
       min-width:320px;
@@ -303,7 +303,7 @@
     .poster-hero{position:relative;min-height:100svh;padding:calc(82px + env(safe-area-inset-top)) 0 0;overflow:hidden;isolation:isolate;background:#030807}
     .poster-hero::before{content:"";position:absolute;inset:-7%;z-index:-3;background:linear-gradient(180deg,rgba(2,8,6,.15),rgba(2,8,6,.78)),var(--patina-img) 52% 45%/cover;transform:translate3d(0,var(--bg-parallax,0px),0) scale(1.08);filter:saturate(.92) contrast(1.06)}
     .poster-hero::after{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 50% 32%,rgba(15,99,82,.18),transparent 38%),linear-gradient(90deg,rgba(2,7,5,.88),transparent 28%,transparent 72%,rgba(2,7,5,.88));pointer-events:none}
-    .poster-stage{position:relative;width:min(100%,1023px);margin:0 auto;line-height:0;box-shadow:0 34px 120px rgba(0,0,0,.52);transform:translate3d(0,var(--poster-parallax,0px),0);will-change:transform}
+    .poster-stage{position:relative;width:min(100%,1023px);margin:0 auto;line-height:0;box-shadow:0 34px 120px rgba(0,0,0,.52);transform:translate3d(0,var(--poster-parallax,0px),0);will-change:transform;container-type:inline-size}
     .poster-image{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
     .scribe-svg{position:absolute;inset:0;width:100%;height:100%;z-index:7;pointer-events:none;overflow:visible}
     .scribe-static,.scribe-dynamic{fill:none;stroke:#c98345;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 5px rgba(201,131,69,.28))}
@@ -315,16 +315,16 @@
     .poster-link:active{background:rgba(229,184,125,.055)}
     .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
     .hit-home{left:41.0%;top:2.0%;width:10.8%;height:4.6%}.hit-gallery{left:53.1%;top:2.0%;width:13.0%;height:4.6%}.hit-top-cta{left:67.2%;top:1.2%;width:31.0%;height:5.1%}
-    .hero-real-button{position:absolute;z-index:40;display:flex;align-items:center;justify-content:center;gap:.75em;height:4.55%;padding:0 1.15em;border-radius:2px;text-transform:uppercase;letter-spacing:.075em;font-weight:750;font-size:clamp(7px,1.02vw,11px);line-height:1;white-space:nowrap;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;box-shadow:0 8px 26px rgba(0,0,0,.22);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease}
+    .hero-real-button{position:absolute;z-index:40;display:flex;align-items:center;justify-content:center;gap:.52em;height:4.55%;padding:0 .72em;border-radius:2px;text-transform:uppercase;letter-spacing:.055em;font-weight:750;font-size:clamp(7px,1.02cqw,11px);line-height:1;white-space:nowrap;min-width:0;overflow:hidden;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%;box-shadow:0 8px 26px rgba(0,0,0,.22);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease}
     .hero-real-button:hover,.hero-real-button:focus-visible{transform:translateY(-1px);outline:none;box-shadow:0 12px 30px rgba(0,0,0,.30)}
     .hero-real-button:active{transform:translateY(1px)}
-    .hero-booking-button{left:4.15%;top:63.78%;width:29.35%;border:1px solid rgba(222,164,104,.70);background:linear-gradient(180deg,rgba(45,33,24,.96),rgba(19,20,17,.96));color:#e7b77e}
-    .hero-portfolio-button{left:35.05%;top:63.78%;width:24.05%;border:1px solid rgba(25,159,137,.70);background:linear-gradient(180deg,rgba(6,35,31,.96),rgba(4,18,16,.96));color:#43cbb8}
-    .hero-button-icon{font-size:1.25em;line-height:1}
-    .hero-button-arrow{font-size:1.45em;margin-left:.25em}
+    .hero-booking-button{left:4.05%;top:63.78%;width:30.05%;border:1px solid rgba(222,164,104,.70);background:linear-gradient(180deg,rgba(45,33,24,.96),rgba(19,20,17,.96));color:#e7b77e}
+    .hero-portfolio-button{left:35.15%;top:63.78%;width:24.65%;border:1px solid rgba(25,159,137,.70);background:linear-gradient(180deg,rgba(6,35,31,.96),rgba(4,18,16,.96));color:#43cbb8}
+    .hero-button-icon{font-size:1.05em;line-height:1;flex:0 0 auto}
+    .hero-button-arrow{font-size:1.2em;margin-left:.08em;flex:0 0 auto}
     .hero-particles{position:absolute;inset:0;z-index:4;pointer-events:none;opacity:.48;mix-blend-mode:screen}
     @media(max-width:1050px){.poster-hero{padding-top:calc(72px + env(safe-area-inset-top))}.poster-stage{width:min(100%,900px)}}
-    @media(max-width:720px){.poster-hero{min-height:auto;padding-top:calc(72px + env(safe-area-inset-top));background:#020705}.poster-hero::after{background:linear-gradient(180deg,rgba(2,7,5,.08),rgba(2,7,5,.12))}.poster-stage{width:100%;box-shadow:none}.hand-motion{filter:none}.hero-particles{opacity:.34}}
+    @media(max-width:720px){.poster-hero{min-height:auto;padding-top:calc(72px + env(safe-area-inset-top));background:#020705}.poster-hero::after{background:linear-gradient(180deg,rgba(2,7,5,.08),rgba(2,7,5,.12))}.poster-stage{width:100%;box-shadow:none}.hand-motion{filter:none}.hero-particles{opacity:.28}.hero-real-button{gap:.38em;padding:0 .48em;letter-spacing:.035em;font-size:clamp(6.2px,1.58cqw,8.2px)}.hero-button-icon{font-size:.9em}.hero-button-arrow{font-size:1.05em}.hero-booking-button{left:3.65%;width:30.75%}.hero-portfolio-button{left:34.85%;width:25.15%}}
     @media(prefers-reduced-motion:reduce){.poster-stage,.poster-hero::before{transform:none!important}.hero-particles{display:none}.scribe-dynamic{stroke-dashoffset:0!important}}
 
   </style>
@@ -338,8 +338,7 @@
         <span class="brand-copy"><strong>KATTOO</strong><small>Tattoo Artist</small></span>
       </a>
       <nav class="menu" id="mainMenu" aria-label="Hauptnavigation">
-        <a href="#studio">Studio</a>
-        <a href="#artist">Artist</a>
+        <a href="#artist">Atelier</a>
         <a href="galerie.html">Galerie</a>
         <a href="#process">Ablauf</a>
         <a href="#booking">Termin</a>
@@ -352,7 +351,7 @@
     <section class="poster-hero" id="home" aria-label="KATTOO Startbereich">
       <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
       <div class="poster-stage" id="posterStage">
-        <img class="poster-image" src="assets/hero-final.webp?v=14" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="1023" height="1537">
+        <img class="poster-image" src="assets/hero-final.webp?v=15" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="1023" height="1537">
         <svg class="scribe-svg" id="scribeSvg" viewBox="0 0 1023 1537" preserveAspectRatio="none" aria-hidden="true">
           <!-- Existing gold line beneath the signature: east of the needle contact point. -->
           <path class="scribe-static" d="M740 1046 C790 1033 840 1030 890 1036 C920 1040 945 1047 968 1058"/>
@@ -361,23 +360,12 @@
           <!-- Animated continuation: from the eastern contact point toward the southwest. -->
           <path class="scribe-dynamic" id="drawPath" d="M744 1045 C718 1054 694 1065 672 1079 C650 1094 630 1109 606 1120"/>
         </svg>
-        <img class="hand-motion" id="handMotion" src="assets/hero-hand-machine-v13.webp?v=14" alt="" aria-hidden="true" width="760" height="946">
+        <img class="hand-motion" id="handMotion" src="assets/hero-hand-machine-v13.webp?v=15" alt="" aria-hidden="true" width="760" height="946">
         <a class="poster-link hit-home" href="#home" aria-label="Home"><span class="sr-only">Home</span></a>
         <a class="poster-link hit-gallery" href="galerie.html" aria-label="Galerie öffnen"><span class="sr-only">Galerie öffnen</span></a>
         <a class="poster-link hit-top-cta" href="#booking" aria-label="Kostenloses Erstgespräch"><span class="sr-only">Kostenloses Erstgespräch</span></a>
         <a class="hero-real-button hero-booking-button" href="#booking" aria-label="Kostenloses Erstgespräch vereinbaren"><span class="hero-button-icon" aria-hidden="true">▣</span><span>Kostenloses Erstgespräch</span></a>
         <a class="hero-real-button hero-portfolio-button" href="galerie.html" aria-label="Portfolio ansehen"><span>Portfolio ansehen</span><span class="hero-button-arrow" aria-hidden="true">→</span></a>
-      </div>
-    </section>
-
-    <section id="studio" class="section tight surface">
-      <div class="shell">
-        <div class="promise-grid">
-          <article class="promise reveal show"><svg viewBox="0 0 32 32"><path d="M16 3l10 5v7c0 7-4.5 11.5-10 14C10.5 26.5 6 22 6 15V8l10-5z"/><path d="M11 16l3 3 7-8"/></svg><h3>Privates Studio</h3><p>Keine Laufkundschaft, kein Druck. Nur Raum für deine Idee.</p></article>
-          <article class="promise reveal"><svg viewBox="0 0 32 32"><path d="M5 25l4-1 14-14-3-3L6 21l-1 4z"/><path d="M18 8l3 3M9 23l-2-2"/></svg><h3>Custom Designs</h3><p>Jedes Motiv wird auf Körperform, Stil und Wirkung abgestimmt.</p></article>
-          <article class="promise reveal"><svg viewBox="0 0 32 32"><path d="M16 4l4 8 8 4-8 4-4 8-4-8-8-4 8-4 4-8z"/><path d="M16 12v8M12 16h8"/></svg><h3>Clean &amp; Safe</h3><p>Hygiene, Vorbereitung und Nachsorge gehören zur Qualität.</p></article>
-          <article class="promise reveal"><svg viewBox="0 0 32 32"><path d="M7 6h18v20H7z"/><path d="M11 3v6M21 3v6M7 12h18M11 17h4M18 17h3M11 22h10"/></svg><h3>By Appointment</h3><p>Termine nach Vorabklärung — mit voller Aufmerksamkeit für dein Projekt.</p></article>
-        </div>
       </div>
     </section>
 
@@ -582,7 +570,7 @@ Liebe Grüße`);
   addEventListener('resize', update, {passive:true});
   update();
 
-  // Very sparse gold dust: perceived depth, not a visible effect layer.
+  // Very sparse teal-gold bokeh dust: subtle depth, never a visible "effect layer".
   const canvas = document.getElementById('heroParticles');
   if (!canvas || reduced) return;
   const ctx = canvas.getContext('2d', {alpha:true});
@@ -591,18 +579,26 @@ Liebe Grüße`);
     dpr=Math.min(2,devicePixelRatio||1); w=hero.clientWidth; h=hero.clientHeight;
     canvas.width=Math.round(w*dpr); canvas.height=Math.round(h*dpr); canvas.style.width=w+'px'; canvas.style.height=h+'px';
     ctx.setTransform(dpr,0,0,dpr,0,0);
-    const count=Math.max(12,Math.min(30,Math.round(w/55)));
-    particles=Array.from({length:count},()=>({x:Math.random()*w,y:Math.random()*h,r:.35+Math.random()*1.05,vx:(Math.random()-.5)*.08,vy:.035+Math.random()*.12,a:.05+Math.random()*.14,tw:Math.random()*6.28,blur:Math.random()<.18}));
+    const count=Math.max(10,Math.min(24,Math.round(w/72)));
+    const palette=['#dca064','#a96d38','#2f9f8b','#55b8a2'];
+    particles=Array.from({length:count},()=>({
+      x:Math.random()*w,y:Math.random()*h,r:.45+Math.random()*1.35,
+      vx:(Math.random()-.5)*.055,vy:.022+Math.random()*.075,
+      a:.025+Math.random()*.085,tw:Math.random()*6.28,
+      blur:Math.random()<.24,color:palette[Math.floor(Math.random()*palette.length)],
+      depth:.35+Math.random()*.65
+    }));
   };
   const draw = (t) => {
     const dt=Math.min(32,t-last||16); last=t; ctx.clearRect(0,0,w,h);
     for(const p of particles){
-      p.x+=p.vx*dt; p.y+=p.vy*dt; p.tw+=dt*.0012;
-      if(p.y>h+12){p.y=-12;p.x=Math.random()*w} if(p.x<-12)p.x=w+12;if(p.x>w+12)p.x=-12;
-      const alpha=p.a*(.72+.28*Math.sin(p.tw));
-      ctx.save(); ctx.globalAlpha=alpha; ctx.fillStyle='#e7aa62';
-      if(p.blur){ctx.translate(p.x,p.y);ctx.rotate(Math.atan2(p.vy,p.vx||.01));ctx.scale(4.5,1);ctx.beginPath();ctx.arc(0,0,p.r,0,Math.PI*2);ctx.fill();}
-      else {ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();}
+      p.x+=p.vx*dt; p.y+=p.vy*dt; p.tw+=dt*.00085;
+      if(p.y>h+14){p.y=-14;p.x=Math.random()*w} if(p.x<-14)p.x=w+14;if(p.x>w+14)p.x=-14;
+      const scrollDrift=Math.max(-8,Math.min(8,-hero.getBoundingClientRect().top*.008))*p.depth;
+      const alpha=p.a*(.78+.22*Math.sin(p.tw));
+      ctx.save(); ctx.globalAlpha=alpha; ctx.fillStyle=p.color;
+      if(p.blur){ctx.translate(p.x,p.y+scrollDrift);ctx.rotate(Math.atan2(p.vy,p.vx||.01));ctx.scale(3.2,1);ctx.filter='blur(.45px)';ctx.beginPath();ctx.arc(0,0,p.r,0,Math.PI*2);ctx.fill();}
+      else {ctx.beginPath();ctx.arc(p.x,p.y+scrollDrift,p.r,0,Math.PI*2);ctx.fill();}
       ctx.restore();
     }
     requestAnimationFrame(draw);
