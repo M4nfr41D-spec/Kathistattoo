@@ -299,7 +299,7 @@
       .hero-claim{font-size:clamp(21px,7.2vw,29px)}
     }
   
-    /* v12 — two-phase needle path: approach from north, then draw southwest */
+    /* v13 — cleaned alpha hand; lower approach start, unchanged signature path */
     .poster-hero{position:relative;min-height:100svh;padding:calc(82px + env(safe-area-inset-top)) 0 0;overflow:hidden;isolation:isolate;background:#030807}
     .poster-hero::before{content:"";position:absolute;inset:-7%;z-index:-3;background:linear-gradient(180deg,rgba(2,8,6,.15),rgba(2,8,6,.78)),var(--patina-img) 52% 45%/cover;transform:translate3d(0,var(--bg-parallax,0px),0) scale(1.08);filter:saturate(.92) contrast(1.06)}
     .poster-hero::after{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 50% 32%,rgba(15,99,82,.18),transparent 38%),linear-gradient(90deg,rgba(2,7,5,.88),transparent 28%,transparent 72%,rgba(2,7,5,.88));pointer-events:none}
@@ -347,16 +347,16 @@
     <section class="poster-hero" id="home" aria-label="KATTOO Startbereich">
       <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
       <div class="poster-stage" id="posterStage">
-        <img class="poster-image" src="assets/hero-final.webp?v=12" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="1023" height="1537">
+        <img class="poster-image" src="assets/hero-final.webp?v=13" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="1023" height="1537">
         <svg class="scribe-svg" id="scribeSvg" viewBox="0 0 1023 1537" preserveAspectRatio="none" aria-hidden="true">
           <!-- Existing gold line beneath the signature: east of the needle contact point. -->
           <path class="scribe-static" d="M740 1046 C790 1033 840 1030 890 1036 C920 1040 945 1047 968 1058"/>
           <!-- Invisible approach path: machine travels north-to-south before touching the line. -->
-          <path id="approachPath" d="M744 870 C744 925 744 990 744 1045" fill="none" stroke="none"/>
+          <path id="approachPath" d="M744 955 C744 985 744 1018 744 1045" fill="none" stroke="none"/>
           <!-- Animated continuation: from the eastern contact point toward the southwest. -->
           <path class="scribe-dynamic" id="drawPath" d="M744 1045 C718 1054 694 1065 672 1079 C650 1094 630 1109 606 1120"/>
         </svg>
-        <img class="hand-motion" id="handMotion" src="assets/hero-hand-machine-v12.webp?v=12" alt="" aria-hidden="true" width="199" height="283">
+        <img class="hand-motion" id="handMotion" src="assets/hero-hand-machine-v13.webp?v=13" alt="" aria-hidden="true" width="760" height="946">
         <a class="poster-link hit-home" href="#home" aria-label="Home"><span class="sr-only">Home</span></a>
         <a class="poster-link hit-gallery" href="galerie.html" aria-label="Galerie öffnen"><span class="sr-only">Galerie öffnen</span></a>
         <a class="poster-link hit-top-cta" href="#booking" aria-label="Kostenloses Erstgespräch"><span class="sr-only">Kostenloses Erstgespräch</span></a>
@@ -517,10 +517,10 @@ Liebe Grüße`);
   const VB_W = 1023;
   const VB_H = 1537;
   const HAND_W_RATIO = 0.1945;
-  const HAND_ASPECT = 283 / 199;
-  const TIP_X_RATIO = 0.965;
-  const TIP_Y_RATIO = 0.975;
-  const APPROACH_SHARE = 0.42;
+  const HAND_ASPECT = 946 / 760;
+  const TIP_X_RATIO = 0.895;
+  const TIP_Y_RATIO = 0.985;
+  const APPROACH_SHARE = 0.30;
   const approachLength = approachPath.getTotalLength();
   const drawLength = drawPath.getTotalLength();
   drawPath.style.strokeDasharray = String(drawLength);
