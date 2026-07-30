@@ -82,3 +82,11 @@ Die HTML-Dateien dieser Version verweisen bereits auf diese flache Struktur.
 - Background parallax is deliberately limited to 14 px.
 - Gold particles are sparse and disabled with `prefers-reduced-motion`.
 - Gallery now uses a true reflow grid with fade transitions; hidden categories leave no gaps.
+
+
+## v9 Motion Fix
+
+- `hero-final.webp` is now the approved flower-based hero without the hand/machine baked in.
+- `hero-hand-machine.webp` contains only the tightly isolated glove and tattoo machine with transparency.
+- No button, background panel, torso block or signature fragment moves with the hand.
+- The hand moves no more than 8 px and the final signature segment is drawn separately as SVG.
