@@ -1,0 +1,417 @@
+{
+  "counts": {
+    "C": 64,
+    "SW": 8,
+    "LA": 11,
+    "CU": 9
+  },
+  "images": [
+    {
+      "source": "00844ac8-4c4b-4c30-babe-fb94f7263255.JPG",
+      "target": "CU1.webp",
+      "category": "CU"
+    },
+    {
+      "source": "07d8321c-bb2c-4e98-ac03-cbc639d71ab4.JPG",
+      "target": "C5.webp",
+      "category": "C"
+    },
+    {
+      "source": "0b63fdda-08ff-4222-a654-27d0f727fbed.JPG",
+      "target": "C6.webp",
+      "category": "C"
+    },
+    {
+      "source": "0f79384d-484b-444c-a308-78ba9df54ecf.JPG",
+      "target": "C7.webp",
+      "category": "C"
+    },
+    {
+      "source": "18f0b71b-27d5-46e6-8a30-8f4c97126773.JPG",
+      "target": "C8.webp",
+      "category": "C"
+    },
+    {
+      "source": "2143f8fd-2f23-484b-901f-e1984d88b94d.JPG",
+      "target": "C9.webp",
+      "category": "C"
+    },
+    {
+      "source": "2316dcb1-bebb-4984-9957-9bb0c2d76b60.JPG",
+      "target": "C10.webp",
+      "category": "C"
+    },
+    {
+      "source": "29f46a27-d90d-4992-94b8-aaacf9e568c0.JPG",
+      "target": "C11.webp",
+      "category": "C"
+    },
+    {
+      "source": "2a28deee-04a0-4d4e-abc6-c9585e3e3b36.JPG",
+      "target": "C12.webp",
+      "category": "C"
+    },
+    {
+      "source": "30cf519b-f432-42f4-a99e-002a77b5ed15.JPG",
+      "target": "C13.webp",
+      "category": "C"
+    },
+    {
+      "source": "31afe7ff-8dc8-4940-b13a-1ebd21e2ff84.JPG",
+      "target": "CU2.webp",
+      "category": "CU"
+    },
+    {
+      "source": "3370a145-ac45-4dfd-91bc-8c547123b373.JPG",
+      "target": "C14.webp",
+      "category": "C"
+    },
+    {
+      "source": "34675efb-3f52-4c3f-a1c2-ca273cd821d6.JPG",
+      "target": "C15.webp",
+      "category": "C"
+    },
+    {
+      "source": "3841ba0a-4d1d-4126-9f57-54445f7370c3.JPG",
+      "target": "C16.webp",
+      "category": "C"
+    },
+    {
+      "source": "3d4e33f6-3bf1-461b-b515-f59e77594458.JPG",
+      "target": "LA2.webp",
+      "category": "LA"
+    },
+    {
+      "source": "41cc7dd7-8da7-4757-b67d-2d6be02fe89a.JPG",
+      "target": "C17.webp",
+      "category": "C"
+    },
+    {
+      "source": "46308eef-ed3d-4b05-98d2-48b01d9fc359.JPG",
+      "target": "C18.webp",
+      "category": "C"
+    },
+    {
+      "source": "4df7e750-66bc-4ab7-8a20-3b335228b271.JPG",
+      "target": "LA3.webp",
+      "category": "LA"
+    },
+    {
+      "source": "4FA95CD2-B121-438E-9D17-8B6579DD626D.PNG",
+      "target": "C19.webp",
+      "category": "C"
+    },
+    {
+      "source": "51f6d0e4-7302-4094-9c65-cc4f71aeda68.JPG",
+      "target": "C20.webp",
+      "category": "C"
+    },
+    {
+      "source": "531EA65D-CB63-42AB-A070-47129F57B2B3.PNG",
+      "target": "C21.webp",
+      "category": "C"
+    },
+    {
+      "source": "54aa3a51-5dca-46bf-8347-3ca990c1b624.JPG",
+      "target": "C22.webp",
+      "category": "C"
+    },
+    {
+      "source": "5836f2be-926b-4d81-a8c5-ccfe01f8c403.JPG",
+      "target": "C23.webp",
+      "category": "C"
+    },
+    {
+      "source": "588e8043-71df-496c-9f53-7549a0d60b2e.JPG",
+      "target": "C24.webp",
+      "category": "C"
+    },
+    {
+      "source": "5a88fd1b-8be1-49ad-87f4-834f23340849.JPG",
+      "target": "C25.webp",
+      "category": "C"
+    },
+    {
+      "source": "5aa41de1-8f5b-4193-9d88-e797e9b5e92d.JPG",
+      "target": "LA4.webp",
+      "category": "LA"
+    },
+    {
+      "source": "5ada76ca-27c5-4767-aa35-bda76c2b03db.JPG",
+      "target": "LA5.webp",
+      "category": "LA"
+    },
+    {
+      "source": "60c05a0d-6d89-44e4-857f-a7e59af75512.JPG",
+      "target": "LA6.webp",
+      "category": "LA"
+    },
+    {
+      "source": "6262d588-43c0-488b-9030-9e8fc976c10b.JPG",
+      "target": "C26.webp",
+      "category": "C"
+    },
+    {
+      "source": "6552fc28-e6d3-420e-bf66-dd84a585cb0d.JPG",
+      "target": "C27.webp",
+      "category": "C"
+    },
+    {
+      "source": "6ad6ac34-74de-4678-af31-4ed9e79f3440.JPG",
+      "target": "CU3.webp",
+      "category": "CU"
+    },
+    {
+      "source": "6b9ce5c1-1cc8-4695-87c5-c4546ea93c37.JPG",
+      "target": "C28.webp",
+      "category": "C"
+    },
+    {
+      "source": "6e563947-8d66-4ebf-9c45-35ef4e8eb4bd.JPG",
+      "target": "CU4.webp",
+      "category": "CU"
+    },
+    {
+      "source": "6f560d56-1de3-435f-bd11-07f60c85b880.JPG",
+      "target": "C29.webp",
+      "category": "C"
+    },
+    {
+      "source": "7608ae0f-aee5-4d21-8b2c-fe41e41e9576.JPG",
+      "target": "C30.webp",
+      "category": "C"
+    },
+    {
+      "source": "775256e5-1580-4cd0-86e3-926df910cfe7.JPG",
+      "target": "C31.webp",
+      "category": "C"
+    },
+    {
+      "source": "7B00297A-F13B-43F9-ACF6-D386D10EE862.PNG",
+      "target": "C32.webp",
+      "category": "C"
+    },
+    {
+      "source": "82d5f381-a25b-4228-b452-42093b9f0cbd.JPG",
+      "target": "C33.webp",
+      "category": "C"
+    },
+    {
+      "source": "8a47f87a-5d23-4236-8359-51279a6165c9.JPG",
+      "target": "C34.webp",
+      "category": "C"
+    },
+    {
+      "source": "8a67f1e0-7504-4809-9393-80491ca70370.JPG",
+      "target": "C35.webp",
+      "category": "C"
+    },
+    {
+      "source": "8b8b6174-f816-4e64-b8b6-60c1b2edfb1a.JPG",
+      "target": "C36.webp",
+      "category": "C"
+    },
+    {
+      "source": "9316a0b9-eda8-48a3-ac66-65d4543eea3c.JPG",
+      "target": "C37.webp",
+      "category": "C"
+    },
+    {
+      "source": "99ee1483-50ad-42a1-9178-bda1d6f2cdca.JPG",
+      "target": "C38.webp",
+      "category": "C"
+    },
+    {
+      "source": "9aa8d9f1-f308-473a-8c45-6b04321bc790.JPG",
+      "target": "C39.webp",
+      "category": "C"
+    },
+    {
+      "source": "9e5716e0-5cf9-4bdf-9f38-857c026d10d2.JPG",
+      "target": "C40.webp",
+      "category": "C"
+    },
+    {
+      "source": "a1fb5a35-781d-4296-a617-e27fb4a7b615.JPG",
+      "target": "C41.webp",
+      "category": "C"
+    },
+    {
+      "source": "A4779852-1BF1-4FC5-9411-AD0CEDF6A2F8.PNG",
+      "target": "C42.webp",
+      "category": "C"
+    },
+    {
+      "source": "a76014cf-61c4-4a80-9d1b-c984a293b0af.JPG",
+      "target": "CU5.webp",
+      "category": "CU"
+    },
+    {
+      "source": "a89061ae-49e6-4e13-9b15-6b2b3d8e484c.JPG",
+      "target": "CU6.webp",
+      "category": "CU"
+    },
+    {
+      "source": "a97c6007-3292-4499-b4e4-4100bcd35898.JPG",
+      "target": "LA7.webp",
+      "category": "LA"
+    },
+    {
+      "source": "ab1532d9-3306-4f2d-bc44-82a6f15e0d9b.JPG",
+      "target": "LA8.webp",
+      "category": "LA"
+    },
+    {
+      "source": "bf53594b-bcdb-40cb-ae27-0d4d8b0377a6.JPG",
+      "target": "C43.webp",
+      "category": "C"
+    },
+    {
+      "source": "c4d4d7bc-2db4-49de-9e69-57649f8639ff.JPG",
+      "target": "CU7.webp",
+      "category": "CU"
+    },
+    {
+      "source": "d25d132c-212d-4dff-a056-0a32b9c02036.JPG",
+      "target": "C44.webp",
+      "category": "C"
+    },
+    {
+      "source": "d3946f4f-43e6-4e18-b163-7984e2435b46.JPG",
+      "target": "C45.webp",
+      "category": "C"
+    },
+    {
+      "source": "d81263c2-0eba-4342-9290-fd164262d700.JPG",
+      "target": "C46.webp",
+      "category": "C"
+    },
+    {
+      "source": "dc02cfcf-43f6-4693-98ab-3346ef6c028d.JPG",
+      "target": "C47.webp",
+      "category": "C"
+    },
+    {
+      "source": "e1a605a0-4ef8-4d11-b381-b06f86ee6cc1.JPG",
+      "target": "C48.webp",
+      "category": "C"
+    },
+    {
+      "source": "e2ee96f1-8ba4-4cf9-94fe-8ae3de8cce82.JPG",
+      "target": "C49.webp",
+      "category": "C"
+    },
+    {
+      "source": "e9f8d607-3895-4cc2-9abd-d116f2a8b66b.JPG",
+      "target": "C50.webp",
+      "category": "C"
+    },
+    {
+      "source": "ea00515e-f34c-45b7-b7db-258c15d94287.JPG",
+      "target": "LA9.webp",
+      "category": "LA"
+    },
+    {
+      "source": "eaa0d0ff-49ae-4023-bc7b-e76690cf8300.JPG",
+      "target": "C51.webp",
+      "category": "C"
+    },
+    {
+      "source": "edce9598-443b-4696-b440-becc705cba7b.JPG",
+      "target": "C52.webp",
+      "category": "C"
+    },
+    {
+      "source": "ee1084de-4c5a-4f23-a560-1ab6653f6133.JPG",
+      "target": "C53.webp",
+      "category": "C"
+    },
+    {
+      "source": "f52d4c19-c25f-467b-8740-fe590e15b6a6.JPG",
+      "target": "SW8.webp",
+      "category": "SW"
+    },
+    {
+      "source": "f6daaeb5-8737-4623-bc5e-61b0af4fd5e9.JPG",
+      "target": "C54.webp",
+      "category": "C"
+    },
+    {
+      "source": "f705c2f7-c01c-462a-ab0e-d0c53888f19c.JPG",
+      "target": "CU8.webp",
+      "category": "CU"
+    },
+    {
+      "source": "f939aace-18d7-4331-be98-34b028adcc1a.JPG",
+      "target": "C55.webp",
+      "category": "C"
+    },
+    {
+      "source": "ff606f93-2d26-4b8b-b486-a3a84232e1cd.JPG",
+      "target": "C56.webp",
+      "category": "C"
+    },
+    {
+      "source": "IMG_1418.jpg",
+      "target": "C57.webp",
+      "category": "C"
+    },
+    {
+      "source": "IMG_1419.jpg",
+      "target": "C58.webp",
+      "category": "C"
+    },
+    {
+      "source": "IMG_1420.jpg",
+      "target": "C59.webp",
+      "category": "C"
+    },
+    {
+      "source": "IMG_1428.jpg",
+      "target": "C60.webp",
+      "category": "C"
+    },
+    {
+      "source": "IMG_1429.jpg",
+      "target": "LA10.webp",
+      "category": "LA"
+    },
+    {
+      "source": "IMG_9264.jpg",
+      "target": "C61.webp",
+      "category": "C"
+    },
+    {
+      "source": "IMG_9265.jpg",
+      "target": "LA11.webp",
+      "category": "LA"
+    },
+    {
+      "source": "IMG_9266.jpg",
+      "target": "C62.webp",
+      "category": "C"
+    },
+    {
+      "source": "IMG_9489.jpg",
+      "target": "CU9.webp",
+      "category": "CU"
+    },
+    {
+      "source": "IMG_9491.jpg",
+      "target": "C63.webp",
+      "category": "C"
+    },
+    {
+      "source": "IMG_9529.jpg",
+      "target": "C64.webp",
+      "category": "C"
+    }
+  ],
+  "videos": [
+    "atelier-video-1.mov",
+    "atelier-video-2.mov",
+    "atelier-video-3.mp4",
+    "atelier-video-4.mp4"
+  ],
+  "notes": "Automatischer Erstlauf: breite Vergleichsbilder → CU; Farbsättigung und Kantenstruktur trennen C, SW und LA."
+}
