@@ -299,27 +299,27 @@
       .hero-claim{font-size:clamp(21px,7.2vw,29px)}
     }
   
-    /* v8 — approved poster hero with restrained motion */
+    /* v12 — two-phase needle path: approach from north, then draw southwest */
     .poster-hero{position:relative;min-height:100svh;padding:calc(82px + env(safe-area-inset-top)) 0 0;overflow:hidden;isolation:isolate;background:#030807}
     .poster-hero::before{content:"";position:absolute;inset:-7%;z-index:-3;background:linear-gradient(180deg,rgba(2,8,6,.15),rgba(2,8,6,.78)),var(--patina-img) 52% 45%/cover;transform:translate3d(0,var(--bg-parallax,0px),0) scale(1.08);filter:saturate(.92) contrast(1.06)}
     .poster-hero::after{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 50% 32%,rgba(15,99,82,.18),transparent 38%),linear-gradient(90deg,rgba(2,7,5,.88),transparent 28%,transparent 72%,rgba(2,7,5,.88));pointer-events:none}
-    .poster-stage{position:relative;width:min(100%,992px);margin:0 auto;line-height:0;box-shadow:0 34px 120px rgba(0,0,0,.52);transform:translate3d(0,var(--poster-parallax,0px),0);will-change:transform}
+    .poster-stage{position:relative;width:min(100%,1023px);margin:0 auto;line-height:0;box-shadow:0 34px 120px rgba(0,0,0,.52);transform:translate3d(0,var(--poster-parallax,0px),0);will-change:transform}
     .poster-image{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
-    .scribe-layer{position:absolute;left:67.0%;top:70.0%;width:24.2%;height:10.6%;z-index:8;pointer-events:none;overflow:visible}
-    .hand-motion{position:absolute;left:0;top:0;width:39%;height:auto;z-index:2;transform:translate3d(var(--hand-x,114px),var(--hand-y,18px),0) rotate(var(--hand-rot,22deg));transform-origin:76% 92%;will-change:transform;pointer-events:none;filter:drop-shadow(0 5px 8px rgba(0,0,0,.16))}
-    .signature-finish{position:absolute;inset:0;width:100%;height:100%;z-index:1;pointer-events:none;overflow:visible}
-    .signature-static,.signature-grow{fill:none;stroke:#c98345;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 4px rgba(201,131,69,.18))}
-    .signature-static{opacity:.98}
-    .signature-grow{stroke-dasharray:124;stroke-dashoffset:124}
-
-    .poster-link{position:absolute;z-index:9;display:block;border-radius:4px;outline-offset:4px;background:transparent;-webkit-tap-highlight-color:transparent;cursor:pointer}
+    .scribe-svg{position:absolute;inset:0;width:100%;height:100%;z-index:7;pointer-events:none;overflow:visible}
+    .scribe-static,.scribe-dynamic{fill:none;stroke:#c98345;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 5px rgba(201,131,69,.28))}
+    .scribe-static{opacity:.98}
+    .scribe-dynamic{stroke-dasharray:1;stroke-dashoffset:1}
+    .hand-motion{position:absolute;left:0;top:0;width:19.45%;height:auto;z-index:8;transform:translate3d(var(--hand-x,0px),var(--hand-y,0px),0) rotate(var(--hand-rot,0deg));transform-origin:96% 97%;will-change:transform;pointer-events:none;filter:drop-shadow(0 5px 8px rgba(0,0,0,.15))}
+    .poster-link{position:absolute;z-index:20;display:block;border-radius:4px;outline-offset:4px;background:rgba(0,0,0,.001);-webkit-tap-highlight-color:transparent;touch-action:manipulation;pointer-events:auto;cursor:pointer}
     .poster-link:focus-visible{outline:2px solid #e5b87d;background:rgba(229,184,125,.08)}
-    .hit-home{left:41.4%;top:2.1%;width:10%;height:4.2%}.hit-gallery{left:53.8%;top:2.1%;width:12%;height:4.2%}.hit-top-cta{left:68.4%;top:1.5%;width:29.5%;height:4.5%}
-    .hit-booking{left:3.8%;top:68.7%;width:31.2%;height:5.0%}.hit-portfolio{left:34.6%;top:68.7%;width:25.0%;height:5.0%}
+    .poster-link:active{background:rgba(229,184,125,.055)}
+    .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
+    .hit-home{left:41.0%;top:2.0%;width:10.8%;height:4.6%}.hit-gallery{left:53.1%;top:2.0%;width:13.0%;height:4.6%}.hit-top-cta{left:67.2%;top:1.2%;width:31.0%;height:5.1%}
+    .hit-booking{left:3.6%;top:67.6%;width:31.8%;height:6.4%}.hit-portfolio{left:34.4%;top:67.6%;width:26.4%;height:6.4%}
     .hero-particles{position:absolute;inset:0;z-index:4;pointer-events:none;opacity:.48;mix-blend-mode:screen}
-    @media(max-width:1050px){.poster-hero{padding-top:calc(72px + env(safe-area-inset-top))}.poster-stage{width:min(100%,860px)}.hand-motion{--hand-scale:.98}}
-    @media(max-width:720px){.poster-hero{min-height:auto;padding-top:calc(72px + env(safe-area-inset-top));background:#020705}.poster-hero::after{background:linear-gradient(180deg,rgba(2,7,5,.08),rgba(2,7,5,.12))}.poster-stage{width:100%;box-shadow:none}.scribe-layer{left:66.6%;top:70.2%;width:24.6%;height:10.8%}.hand-motion{filter:none}.hero-particles{opacity:.34}}
-    @media(prefers-reduced-motion:reduce){.poster-stage,.poster-hero::before{transform:none!important}.hero-particles{display:none}.signature-grow{stroke-dashoffset:0!important;animation:none!important}}
+    @media(max-width:1050px){.poster-hero{padding-top:calc(72px + env(safe-area-inset-top))}.poster-stage{width:min(100%,900px)}}
+    @media(max-width:720px){.poster-hero{min-height:auto;padding-top:calc(72px + env(safe-area-inset-top));background:#020705}.poster-hero::after{background:linear-gradient(180deg,rgba(2,7,5,.08),rgba(2,7,5,.12))}.poster-stage{width:100%;box-shadow:none}.hand-motion{filter:none}.hero-particles{opacity:.34}}
+    @media(prefers-reduced-motion:reduce){.poster-stage,.poster-hero::before{transform:none!important}.hero-particles{display:none}.scribe-dynamic{stroke-dashoffset:0!important}}
 
   </style>
 </head>
@@ -347,19 +347,21 @@
     <section class="poster-hero" id="home" aria-label="KATTOO Startbereich">
       <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
       <div class="poster-stage" id="posterStage">
-        <img class="poster-image" src="assets/hero-final.webp?v=11" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="992" height="1472">
-        <div class="scribe-layer" id="scribeLayer" aria-hidden="true">
-          <svg class="signature-finish" viewBox="0 0 240 82" preserveAspectRatio="none" aria-hidden="true">
-            <path class="signature-static" d="M8 41 C32 33, 64 28, 98 27 C112 27, 123 27, 134 28" />
-            <path class="signature-grow" id="scribePath" d="M134 28 C153 28, 172 30, 191 35 C207 39, 221 44, 236 52" />
-          </svg>
-          <img class="hand-motion" id="handMotion" src="assets/hero-hand-machine.webp?v=11" alt="" aria-hidden="true" width="201" height="291">
-        </div>
-        <a class="poster-link hit-home" href="#home" aria-label="Home"></a>
-        <a class="poster-link hit-gallery" href="galerie.html" aria-label="Galerie öffnen"></a>
-        <a class="poster-link hit-top-cta" href="#booking" aria-label="Kostenloses Erstgespräch"></a>
-        <a class="poster-link hit-booking" href="#booking" aria-label="Kostenloses Erstgespräch vereinbaren"></a>
-        <a class="poster-link hit-portfolio" href="galerie.html" aria-label="Portfolio ansehen"></a>
+        <img class="poster-image" src="assets/hero-final.webp?v=12" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="1023" height="1537">
+        <svg class="scribe-svg" id="scribeSvg" viewBox="0 0 1023 1537" preserveAspectRatio="none" aria-hidden="true">
+          <!-- Existing gold line beneath the signature: east of the needle contact point. -->
+          <path class="scribe-static" d="M740 1046 C790 1033 840 1030 890 1036 C920 1040 945 1047 968 1058"/>
+          <!-- Invisible approach path: machine travels north-to-south before touching the line. -->
+          <path id="approachPath" d="M744 870 C744 925 744 990 744 1045" fill="none" stroke="none"/>
+          <!-- Animated continuation: from the eastern contact point toward the southwest. -->
+          <path class="scribe-dynamic" id="drawPath" d="M744 1045 C718 1054 694 1065 672 1079 C650 1094 630 1109 606 1120"/>
+        </svg>
+        <img class="hand-motion" id="handMotion" src="assets/hero-hand-machine-v12.webp?v=12" alt="" aria-hidden="true" width="199" height="283">
+        <a class="poster-link hit-home" href="#home" aria-label="Home"><span class="sr-only">Home</span></a>
+        <a class="poster-link hit-gallery" href="galerie.html" aria-label="Galerie öffnen"><span class="sr-only">Galerie öffnen</span></a>
+        <a class="poster-link hit-top-cta" href="#booking" aria-label="Kostenloses Erstgespräch"><span class="sr-only">Kostenloses Erstgespräch</span></a>
+        <a class="poster-link hit-booking" href="#booking" aria-label="Kostenloses Erstgespräch vereinbaren"><span class="sr-only">Kostenloses Erstgespräch vereinbaren</span></a>
+        <a class="poster-link hit-portfolio" href="galerie.html" aria-label="Portfolio ansehen"><span class="sr-only">Portfolio ansehen</span></a>
       </div>
     </section>
 
@@ -507,51 +509,71 @@ Liebe Grüße`);
   const hero = document.querySelector('.poster-hero');
   const stage = document.getElementById('posterStage');
   const hand = document.getElementById('handMotion');
-  const path = document.getElementById('scribePath');
-  if (!hero || !stage || !hand || !path) return;
+  const approachPath = document.getElementById('approachPath');
+  const drawPath = document.getElementById('drawPath');
+  if (!hero || !stage || !hand || !approachPath || !drawPath) return;
+
   const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
-  const staticPath = hero.querySelector('.signature-static');
+  const VB_W = 1023;
+  const VB_H = 1537;
+  const HAND_W_RATIO = 0.1945;
+  const HAND_ASPECT = 283 / 199;
+  const TIP_X_RATIO = 0.965;
+  const TIP_Y_RATIO = 0.975;
+  const APPROACH_SHARE = 0.42;
+  const approachLength = approachPath.getTotalLength();
+  const drawLength = drawPath.getTotalLength();
+  drawPath.style.strokeDasharray = String(drawLength);
+  drawPath.style.strokeDashoffset = String(drawLength);
   let ticking = false;
-  const pathLength = path.getTotalLength();
-  path.style.strokeDasharray = String(pathLength);
-  path.style.strokeDashoffset = String(pathLength);
-  const tipXRatio = 0.86; // machine tip inside hand asset
-  const tipYRatio = 0.96;
-  const handWidthRatio = 0.39;
-  const handNaturalW = 201;
-  const handNaturalH = 291;
+
+  function pointOn(path, length, progress){
+    return path.getPointAtLength(Math.max(0, Math.min(length, length * progress)));
+  }
 
   const update = () => {
     ticking = false;
     const rect = hero.getBoundingClientRect();
     const vh = innerHeight || 800;
-    const progress = reduced ? 1 : Math.max(0, Math.min(1, -rect.top / Math.max(1, rect.height - vh * .42)));
+    const scrollRange = Math.max(1, rect.height - vh * .38);
+    const progress = reduced ? 1 : Math.max(0, Math.min(1, -rect.top / scrollRange));
+
     const posterY = reduced ? 0 : Math.max(-8, Math.min(8, -rect.top * .018));
     const bgY = reduced ? 0 : Math.max(-14, Math.min(14, -rect.top * .032));
     stage.style.setProperty('--poster-parallax', `${posterY.toFixed(2)}px`);
     hero.style.setProperty('--bg-parallax', `${bgY.toFixed(2)}px`);
 
-    const point = path.getPointAtLength(pathLength * progress);
-    const pointAhead = path.getPointAtLength(Math.min(pathLength, pathLength * progress + 1));
-    const angle = Math.atan2(pointAhead.y - point.y, pointAhead.x - point.x) * 180 / Math.PI;
+    let point;
+    let rotation;
+    let drawProgress = 0;
+    if(progress <= APPROACH_SHARE){
+      const p = progress / APPROACH_SHARE;
+      point = pointOn(approachPath, approachLength, p);
+      rotation = -1 + p * 2.5;
+    } else {
+      drawProgress = (progress - APPROACH_SHARE) / (1 - APPROACH_SHARE);
+      point = pointOn(drawPath, drawLength, drawProgress);
+      rotation = 1.5 - drawProgress * 8.5;
+    }
 
-    const layer = document.getElementById('scribeLayer');
-    const layerW = layer.clientWidth || 1;
-    const layerH = layer.clientHeight || 1;
-    const handW = layerW * handWidthRatio;
-    const handH = handW * (handNaturalH / handNaturalW);
-    const tipX = handW * tipXRatio;
-    const tipY = handH * tipYRatio;
-    const offsetX = point.x - tipX;
-    const offsetY = point.y - tipY;
+    const stageW = stage.clientWidth || 1;
+    const stageH = stage.clientHeight || 1;
+    const px = point.x / VB_W * stageW;
+    const py = point.y / VB_H * stageH;
+    const handW = stageW * HAND_W_RATIO;
+    const handH = handW * HAND_ASPECT;
+    const handX = px - handW * TIP_X_RATIO;
+    const handY = py - handH * TIP_Y_RATIO;
 
-    hand.style.setProperty('--hand-x', `${offsetX.toFixed(2)}px`);
-    hand.style.setProperty('--hand-y', `${offsetY.toFixed(2)}px`);
-    hand.style.setProperty('--hand-rot', `${(angle + 12).toFixed(2)}deg`);
-    path.style.strokeDashoffset = String(Math.max(0, pathLength - (progress * pathLength)));
-    if (staticPath) staticPath.style.opacity = progress > .02 ? '0.98' : '0.92';
+    hand.style.setProperty('--hand-x', `${handX.toFixed(2)}px`);
+    hand.style.setProperty('--hand-y', `${handY.toFixed(2)}px`);
+    hand.style.setProperty('--hand-rot', `${rotation.toFixed(2)}deg`);
+    drawPath.style.strokeDashoffset = String(drawLength * (1 - drawProgress));
   };
-  addEventListener('scroll', () => { if (!ticking) { ticking=true; requestAnimationFrame(update); } }, {passive:true});
+
+  addEventListener('scroll', () => {
+    if (!ticking) { ticking = true; requestAnimationFrame(update); }
+  }, {passive:true});
   addEventListener('resize', update, {passive:true});
   update();
 
