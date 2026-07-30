@@ -2,82 +2,94 @@
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover"><meta name="theme-color" content="#07100d">
 <title>Galerie — KATTOO</title><meta name="description" content="KATTOO Tattoo Galerie mit Color, Schwarzweiß, Lineart und Cover-up-Arbeiten.">
 <style>
-:root{--bg:#040807;--ink:#f3e9da;--muted:#b9aa99;--copper2:#efbf8a;--line:rgba(90,177,147,.22);--max:1360px;--shadow:0 25px 80px rgba(0,0,0,.46)}*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;min-width:320px;color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:linear-gradient(180deg,rgba(2,7,5,.18),rgba(2,7,5,.76)),url('assets/gallery-bg.webp') center top/100% auto repeat-y,var(--bg);overflow-x:hidden}body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 18% 8%,rgba(59,175,146,.13),transparent 28%),radial-gradient(circle at 86% 20%,rgba(200,143,92,.09),transparent 25%)}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}.shell{width:min(var(--max),calc(100% - 38px));margin:auto}.topbar{position:sticky;top:0;z-index:50;background:rgba(4,10,8,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{min-height:82px;display:flex;align-items:center;gap:22px}.brand{display:flex;align-items:center;gap:12px;margin-right:auto;min-width:0}.brand img{width:52px;height:52px;object-fit:cover;border-radius:50%;border:1px solid rgba(239,191,138,.4)}.brand strong{display:block;font-family:Georgia,serif;font-size:25px;letter-spacing:.06em}.brand small{display:block;color:var(--copper2);font-size:9px;letter-spacing:.24em;text-transform:uppercase}.links{display:flex;gap:24px;text-transform:uppercase;letter-spacing:.17em;font-size:10px;color:#dbc9b6}.links a:hover{color:var(--copper2)}.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.filter{border:1px solid rgba(239,191,138,.28);background:rgba(3,8,6,.34);padding:10px 13px;text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:800;cursor:pointer}.filter[aria-pressed="true"]{background:rgba(200,143,92,.20);border-color:rgba(239,191,138,.72);color:var(--copper2)}.hero{padding:88px 0 42px;text-align:center}.kicker{color:var(--copper2);text-transform:uppercase;letter-spacing:.30em;font-size:11px;font-weight:800}h1{font-family:Georgia,serif;font-size:clamp(48px,9vw,108px);line-height:.9;margin:14px 0 22px;letter-spacing:-.04em;text-transform:uppercase}.hero p{max-width:760px;margin:auto;color:var(--muted);line-height:1.8}.gallery{columns:4 270px;column-gap:16px;padding-bottom:72px}.card{break-inside:avoid;margin:0 0 16px;position:relative;overflow:hidden;border:1px solid var(--line);background:#07110e;box-shadow:var(--shadow)}.card img{display:block;width:100%;height:auto;min-height:180px;object-fit:cover;transition:transform .42s ease,filter .42s ease}.card:hover img{transform:scale(1.018);filter:saturate(1.04)}.badge{position:absolute;left:12px;bottom:12px;background:rgba(3,8,6,.78);border:1px solid rgba(239,191,138,.27);backdrop-filter:blur(8px);padding:7px 9px;font-size:8px;text-transform:uppercase;letter-spacing:.16em;color:var(--copper2)}.card[data-category="CU"]::after{content:"Cover-up / Vergleich";position:absolute;right:12px;top:12px;background:rgba(3,8,6,.80);border:1px solid rgba(90,177,147,.28);padding:7px 9px;font-size:8px;letter-spacing:.12em;text-transform:uppercase}.empty{display:none;text-align:center;color:var(--muted);padding:50px 20px}.sentinel{height:1px}.footer{border-top:1px solid var(--line);background:rgba(3,8,6,.82);padding:42px 0}.footer-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;min-height:50px;align-items:center;justify-content:center;padding:0 24px;border:1px solid rgba(239,191,138,.45);text-transform:uppercase;letter-spacing:.15em;font-size:10px;font-weight:800}.btn.primary{background:linear-gradient(135deg,rgba(200,143,92,.96),rgba(113,58,39,.92));color:#07100d}.btn.ghost{background:rgba(3,8,6,.25);color:var(--copper2)}.lightbox{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:24px;background:rgba(1,4,3,.94);backdrop-filter:blur(14px)}.lightbox.open{display:grid}.lightbox img{max-width:min(94vw,1500px);max-height:90vh;object-fit:contain;box-shadow:0 28px 100px #000}.close{position:fixed;right:18px;top:18px;width:48px;height:48px;border:1px solid rgba(239,191,138,.45);background:#07100d;color:var(--copper2);font-size:25px;cursor:pointer}@media(max-width:1100px){.nav{flex-wrap:wrap;padding:13px 0}.links{order:3;width:100%}.filters{margin-left:auto}}@media(max-width:700px){.shell{width:calc(100% - 24px)}.brand img{width:44px;height:44px}.brand strong{font-size:21px}.links{gap:16px;overflow:auto}.filter{flex:1 1 calc(50% - 5px);padding:11px 7px}.filters{width:100%}.hero{padding:58px 0 32px}.gallery{columns:2 145px;column-gap:10px}.card{margin-bottom:10px}.badge{display:none}}
+:root{--bg:#040807;--ink:#f3e9da;--muted:#b9aa99;--copper2:#efbf8a;--line:rgba(90,177,147,.22);--max:1360px;--shadow:0 25px 80px rgba(0,0,0,.46)}*{box-sizing:border-box}html{scroll-behavior:smooth;background:var(--bg)}body{margin:0;min-width:320px;color:var(--ink);font-family:Inter,system-ui,-apple-system,"Segoe UI",sans-serif;background:linear-gradient(180deg,rgba(2,7,5,.18),rgba(2,7,5,.76)),url('assets/gallery-bg.webp') center top/100% auto repeat-y,var(--bg);overflow-x:hidden}body::before{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background:radial-gradient(circle at 18% 8%,rgba(59,175,146,.13),transparent 28%),radial-gradient(circle at 86% 20%,rgba(200,143,92,.09),transparent 25%)}a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}.shell{width:min(var(--max),calc(100% - 38px));margin:auto}.topbar{position:sticky;top:0;z-index:50;background:rgba(4,10,8,.88);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}.nav{min-height:82px;display:flex;align-items:center;gap:22px}.brand{display:flex;align-items:center;gap:12px;margin-right:auto;min-width:0}.brand img{width:52px;height:52px;object-fit:cover;border-radius:50%;border:1px solid rgba(239,191,138,.4)}.brand strong{display:block;font-family:Georgia,serif;font-size:25px;letter-spacing:.06em}.brand small{display:block;color:var(--copper2);font-size:9px;letter-spacing:.24em;text-transform:uppercase}.links{display:flex;gap:24px;text-transform:uppercase;letter-spacing:.17em;font-size:10px;color:#dbc9b6}.links a:hover{color:var(--copper2)}.filters{display:flex;gap:8px;flex-wrap:wrap;justify-content:flex-end}.filter{border:1px solid rgba(239,191,138,.28);background:rgba(3,8,6,.34);padding:10px 13px;text-transform:uppercase;letter-spacing:.12em;font-size:10px;font-weight:800;cursor:pointer}.filter[aria-pressed="true"]{background:rgba(200,143,92,.20);border-color:rgba(239,191,138,.72);color:var(--copper2)}.hero{padding:88px 0 42px;text-align:center}.kicker{color:var(--copper2);text-transform:uppercase;letter-spacing:.30em;font-size:11px;font-weight:800}h1{font-family:Georgia,serif;font-size:clamp(48px,9vw,108px);line-height:.9;margin:14px 0 22px;letter-spacing:-.04em;text-transform:uppercase}.hero p{max-width:760px;margin:auto;color:var(--muted);line-height:1.8}.gallery{columns:4 270px;column-gap:16px;padding-bottom:72px}.card{break-inside:avoid;margin:0 0 16px;position:relative;overflow:hidden;border:1px solid var(--line);background:#07110e;box-shadow:var(--shadow)}.card img{display:block;width:100%;height:auto;min-height:180px;object-fit:cover;transition:transform .42s ease,filter .42s ease}.card:hover img{transform:scale(1.018);filter:saturate(1.04)}.badge{position:absolute;left:12px;bottom:12px;background:rgba(3,8,6,.78);border:1px solid rgba(239,191,138,.27);backdrop-filter:blur(8px);padding:7px 9px;font-size:8px;text-transform:uppercase;letter-spacing:.16em;color:var(--copper2)}.cover-tag{position:absolute;right:12px;top:12px;background:rgba(3,8,6,.82);border:1px solid rgba(90,177,147,.30);backdrop-filter:blur(8px);padding:7px 9px;font-size:8px;letter-spacing:.12em;text-transform:uppercase;color:#ead8c4}.empty{display:none;text-align:center;color:var(--muted);padding:50px 20px}.sentinel{height:1px}.footer{border-top:1px solid var(--line);background:rgba(3,8,6,.82);padding:42px 0}.footer-actions{display:flex;justify-content:center;gap:14px;flex-wrap:wrap}.btn{display:inline-flex;min-height:50px;align-items:center;justify-content:center;padding:0 24px;border:1px solid rgba(239,191,138,.45);text-transform:uppercase;letter-spacing:.15em;font-size:10px;font-weight:800}.btn.primary{background:linear-gradient(135deg,rgba(200,143,92,.96),rgba(113,58,39,.92));color:#07100d}.btn.ghost{background:rgba(3,8,6,.25);color:var(--copper2)}.lightbox{position:fixed;inset:0;z-index:100;display:none;place-items:center;padding:24px;background:rgba(1,4,3,.94);backdrop-filter:blur(14px)}.lightbox.open{display:grid}.lightbox img{max-width:min(94vw,1500px);max-height:90vh;object-fit:contain;box-shadow:0 28px 100px #000}.close{position:fixed;right:18px;top:18px;width:48px;height:48px;border:1px solid rgba(239,191,138,.45);background:#07100d;color:var(--copper2);font-size:25px;cursor:pointer}@media(max-width:1100px){.nav{flex-wrap:wrap;padding:13px 0}.links{order:3;width:100%}.filters{margin-left:auto}}@media(max-width:700px){.shell{width:calc(100% - 24px)}.brand img{width:44px;height:44px}.brand strong{font-size:21px}.links{gap:16px;overflow:auto}.filter{flex:1 1 calc(50% - 5px);padding:11px 7px}.filters{width:100%}.hero{padding:58px 0 32px}.gallery{columns:2 145px;column-gap:10px}.card{margin-bottom:10px}.badge{display:none}}
 </style></head><body>
 <header class="topbar"><div class="shell nav"><a class="brand" href="index.html"><img src="assets/kattoo-seal.webp" alt=""><span><strong>KATTOO</strong><small>Endless Gallery</small></span></a><nav class="links"><a href="index.html">Home</a><a href="beyond-ink.html">Beyond Ink</a><a href="index.html#booking">Kontakt</a></nav><div class="filters"><button class="filter" data-filter="C" aria-pressed="true">Color &amp; Comic</button><button class="filter" data-filter="SW" aria-pressed="true">Schwarzweiß</button><button class="filter" data-filter="LA" aria-pressed="true">Lineart</button><button class="filter" data-filter="CU" aria-pressed="true">Cover-up</button></div></div></header>
-<main><section class="hero"><div class="shell"><div class="kicker">Selected Work</div><h1>Galerie</h1><p>Ein wachsendes Portfolio in natürlicher Masonry-Anordnung. Color- und Comic-Motive, Schwarzweiß, feine Linien und Vergleichsaufnahmen lassen sich getrennt oder gemeinsam anzeigen.</p></div></section><section class="shell"><div id="gallery" class="gallery" aria-live="polite"></div><div id="empty" class="empty">Für die aktive Filterauswahl wurden keine Bilder gefunden.</div><div id="sentinel" class="sentinel"></div></section></main>
+<main><section class="hero"><div class="shell"><div class="kicker">Selected Work</div><h1>Galerie</h1><p>Ein kuratiertes Portfolio in natürlicher Masonry-Anordnung. Cover-ups werden ausschließlich als klar definierte Vergleichs- oder Ergebnisarbeiten gezeigt.</p></div></section><section class="shell"><div id="gallery" class="gallery" aria-live="polite"></div><div id="empty" class="empty">Für die aktive Filterauswahl wurden keine Bilder gefunden.</div><div id="sentinel" class="sentinel"></div></section></main>
 <footer class="footer"><div class="shell"><div class="footer-actions"><a class="btn ghost" href="index.html">Zur Hauptseite</a><a class="btn ghost" href="beyond-ink.html">Beyond Ink</a><a class="btn primary" href="index.html#booking">Kostenloses Erstgespräch</a></div></div></footer>
 <div class="lightbox" id="lightbox"><button class="close" id="closeLightbox">×</button><img id="lightboxImage" alt=""></div>
 <script>
-const categories={C:{label:'Color & Comic',max:59},SW:{label:'Schwarzweiß',max:9},LA:{label:'Lineart',max:12},CU:{label:'Cover-up',max:9}};
-const extensions=['webp','jpg','jpeg','png'];
-const active=new Set(Object.keys(categories));
+const categoryLabels={
+  C:'Color & Comic',
+  SW:'Schwarzweiß',
+  LA:'Lineart',
+  CU:'Cover-up'
+};
+const galleryItems=[{"file":"C1.webp","category":"C","code":"C1","title":null},{"file":"C2.webp","category":"C","code":"C2","title":null},{"file":"C3.webp","category":"C","code":"C3","title":null},{"file":"C4.webp","category":"C","code":"C4","title":null},{"file":"C5.webp","category":"C","code":"C5","title":null},{"file":"C6.webp","category":"C","code":"C6","title":null},{"file":"C8.webp","category":"C","code":"C8","title":null},{"file":"C9.webp","category":"C","code":"C9","title":null},{"file":"C10.webp","category":"C","code":"C10","title":null},{"file":"C11.webp","category":"C","code":"C11","title":null},{"file":"C12.webp","category":"C","code":"C12","title":null},{"file":"C13.webp","category":"C","code":"C13","title":null},{"file":"C14.webp","category":"C","code":"C14","title":null},{"file":"C15.webp","category":"C","code":"C15","title":null},{"file":"C16.webp","category":"C","code":"C16","title":null},{"file":"C17.webp","category":"C","code":"C17","title":null},{"file":"C18.webp","category":"C","code":"C18","title":null},{"file":"C19.webp","category":"C","code":"C19","title":null},{"file":"C20.webp","category":"C","code":"C20","title":null},{"file":"C21.webp","category":"C","code":"C21","title":null},{"file":"C22.webp","category":"C","code":"C22","title":null},{"file":"C23.webp","category":"C","code":"C23","title":null},{"file":"C24.webp","category":"C","code":"C24","title":null},{"file":"C26.webp","category":"C","code":"C26","title":null},{"file":"C27.webp","category":"C","code":"C27","title":null},{"file":"C28.webp","category":"C","code":"C28","title":null},{"file":"C29.webp","category":"C","code":"C29","title":null},{"file":"C30.webp","category":"C","code":"C30","title":null},{"file":"C31.webp","category":"C","code":"C31","title":null},{"file":"C32.webp","category":"C","code":"C32","title":null},{"file":"C33.webp","category":"C","code":"C33","title":null},{"file":"C34.webp","category":"C","code":"C34","title":null},{"file":"C35.webp","category":"C","code":"C35","title":null},{"file":"C36.webp","category":"C","code":"C36","title":null},{"file":"C37.webp","category":"C","code":"C37","title":null},{"file":"C38.webp","category":"C","code":"C38","title":null},{"file":"C39.webp","category":"C","code":"C39","title":null},{"file":"C40.webp","category":"C","code":"C40","title":null},{"file":"C41.webp","category":"C","code":"C41","title":null},{"file":"C42.webp","category":"C","code":"C42","title":null},{"file":"C43.webp","category":"C","code":"C43","title":null},{"file":"C44.webp","category":"C","code":"C44","title":null},{"file":"C46.webp","category":"C","code":"C46","title":null},{"file":"C47.webp","category":"C","code":"C47","title":null},{"file":"C48.webp","category":"C","code":"C48","title":null},{"file":"C49.webp","category":"C","code":"C49","title":null},{"file":"C50.webp","category":"C","code":"C50","title":null},{"file":"C51.webp","category":"C","code":"C51","title":null},{"file":"C52.webp","category":"C","code":"C52","title":null},{"file":"C53.webp","category":"C","code":"C53","title":null},{"file":"C54.webp","category":"C","code":"C54","title":null},{"file":"C55.webp","category":"C","code":"C55","title":null},{"file":"C56.webp","category":"C","code":"C56","title":null},{"file":"C57.webp","category":"C","code":"C57","title":null},{"file":"C58.webp","category":"C","code":"C58","title":null},{"file":"C59.webp","category":"C","code":"C59","title":null},{"file":"CU6.webp","category":"C","code":"C·Floral","title":null},{"file":"SW1.webp","category":"SW","code":"SW1","title":null},{"file":"SW2.webp","category":"SW","code":"SW2","title":null},{"file":"SW3.webp","category":"SW","code":"SW3","title":null},{"file":"SW4.webp","category":"SW","code":"SW4","title":null},{"file":"SW5.webp","category":"SW","code":"SW5","title":null},{"file":"SW6.webp","category":"SW","code":"SW6","title":null},{"file":"SW7.webp","category":"SW","code":"SW7","title":null},{"file":"SW8.webp","category":"SW","code":"SW8","title":null},{"file":"SW9.webp","category":"SW","code":"SW9","title":null},{"file":"CU3.webp","category":"SW","code":"SW·Seestern","title":null},{"file":"CU4.webp","category":"SW","code":"SW·Seestern","title":null},{"file":"LA1.webp","category":"LA","code":"LA1","title":null},{"file":"LA2.webp","category":"LA","code":"LA2","title":null},{"file":"LA3.webp","category":"LA","code":"LA3","title":null},{"file":"LA4.webp","category":"LA","code":"LA4","title":null},{"file":"LA5.webp","category":"LA","code":"LA5","title":null},{"file":"LA6.webp","category":"LA","code":"LA6","title":null},{"file":"LA7.webp","category":"LA","code":"LA7","title":null},{"file":"LA8.webp","category":"LA","code":"LA8","title":null},{"file":"LA9.webp","category":"LA","code":"LA9","title":null},{"file":"LA10.webp","category":"LA","code":"LA10","title":null},{"file":"LA11.webp","category":"LA","code":"LA11","title":null},{"file":"LA12.webp","category":"LA","code":"LA12","title":null},{"file":"CU2.webp","category":"LA","code":"LA·Schmetterlinge","title":null},{"file":"CU5.webp","category":"LA","code":"LA·Mini","title":null},{"file":"CU7.webp","category":"LA","code":"LA·Botanical","title":null},{"file":"CU9.webp","category":"LA","code":"LA·Ornamental","title":null},{"file":"CU1.webp","category":"CU","code":"CU1","title":"Karpfen · Vorher / Nachher","kind":"comparison"},{"file":"CU10.webp","category":"CU","code":"CU2","title":"Katze · Vorher / Nachher","kind":"comparison"},{"file":"CU11.webp","category":"CU","code":"CU3","title":"Brustmotiv · Cover-up Ergebnis","kind":"result"},{"file":"CU12.webp","category":"CU","code":"CU4","title":"Indianerkopf · Cover-up Ergebnis","kind":"result"}];
+const active=new Set(Object.keys(categoryLabels));
 const gallery=document.getElementById('gallery');
 const empty=document.getElementById('empty');
 const sentinel=document.getElementById('sentinel');
+const extensions=['webp','jpg','jpeg','png'];
 let queue=[],cursor=0,loaded=0,failed=0,generation=0;
 
 function rebuild(){
   generation++;
   gallery.innerHTML='';
   cursor=loaded=failed=0;
-  queue=[];
-  for(const key of Object.keys(categories)){
-    if(!active.has(key)) continue;
-    for(let i=1;i<=categories[key].max;i++) queue.push({key,i});
-  }
-  queue.sort((a,b)=>a.i-b.i||a.key.localeCompare(b.key));
+  queue=galleryItems.filter(item=>active.has(item.category));
   empty.style.display='none';
   appendBatch();
 }
 
-function appendItem(item,buildId){
+function appendItem(item,buildId,eager){
   if(buildId!==generation) return;
   const card=document.createElement('article');
   card.className='card';
-  card.dataset.category=item.key;
+  card.dataset.category=item.category;
   card.tabIndex=0;
 
   const img=document.createElement('img');
-  img.loading=cursor<=18?'eager':'lazy';
+  img.loading=eager?'eager':'lazy';
   img.decoding='async';
-  img.alt=`${categories[item.key].label} Tattoo ${item.i}`;
+  img.alt=item.title||`${categoryLabels[item.category]} Tattoo`;
 
   const badge=document.createElement('span');
   badge.className='badge';
-  badge.textContent=`${categories[item.key].label} · ${item.key}${item.i}`;
+  badge.textContent=item.title||`${categoryLabels[item.category]} · ${item.code}`;
 
   card.append(img,badge);
+
+  if(item.category==='CU'){
+    const tag=document.createElement('span');
+    tag.className='cover-tag';
+    tag.textContent=item.kind==='comparison'?'Vorher / Nachher':'Cover-up Ergebnis';
+    card.appendChild(tag);
+  }
+
   gallery.appendChild(card);
 
-  let extensionIndex=0;
-  const loadNextExtension=()=>{
+  let extIndex=0;
+  const loadNext=()=>{
     if(buildId!==generation){card.remove();return;}
-    if(extensionIndex>=extensions.length){
+    if(extIndex>=extensions.length){
       card.remove();
       failed++;
       checkEmpty();
       return;
     }
-    const extension=extensions[extensionIndex++];
-    img.src=`assets/${item.key}${item.i}.${extension}`;
+    img.src=`assets/${item.file.replace(/\.[^.]+$/,'')}.${extensions[extIndex++]}`;
   };
 
   img.onload=()=>{
     if(buildId!==generation){card.remove();return;}
     loaded++;
     card.onclick=()=>openLightbox(img);
-    card.onkeydown=e=>{if(e.key==='Enter'||e.key===' ') openLightbox(img)};
+    card.onkeydown=e=>{if(e.key==='Enter'||e.key===' ') openLightbox(img);};
     checkEmpty();
   };
-  img.onerror=loadNextExtension;
-  loadNextExtension();
+  img.onerror=loadNext;
+  loadNext();
 }
 
 function appendBatch(){
   const buildId=generation;
   const end=Math.min(cursor+18,queue.length);
-  while(cursor<end) appendItem(queue[cursor++],buildId);
+  while(cursor<end){
+    const item=queue[cursor];
+    appendItem(item,buildId,cursor<18);
+    cursor++;
+  }
   checkEmpty();
 }
 
@@ -97,7 +109,7 @@ if('IntersectionObserver' in window){
     if(entries[0].isIntersecting&&cursor<queue.length) appendBatch();
   },{rootMargin:'900px'}).observe(sentinel);
 }else{
-  addEventListener('scroll',()=>{if(cursor<queue.length) appendBatch()},{passive:true});
+  addEventListener('scroll',()=>{if(cursor<queue.length) appendBatch();},{passive:true});
 }
 
 const lightbox=document.getElementById('lightbox');
@@ -108,9 +120,12 @@ function openLightbox(img){
   lightbox.classList.add('open');
   document.body.style.overflow='hidden';
 }
-function closeLightbox(){lightbox.classList.remove('open');document.body.style.overflow=''}
+function closeLightbox(){
+  lightbox.classList.remove('open');
+  document.body.style.overflow='';
+}
 document.getElementById('closeLightbox').onclick=closeLightbox;
-lightbox.onclick=e=>{if(e.target===lightbox) closeLightbox()};
-addEventListener('keydown',e=>{if(e.key==='Escape') closeLightbox()});
+lightbox.onclick=e=>{if(e.target===lightbox) closeLightbox();};
+addEventListener('keydown',e=>{if(e.key==='Escape') closeLightbox();});
 rebuild();
 </script></body></html>
