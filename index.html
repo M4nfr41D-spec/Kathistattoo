@@ -305,11 +305,10 @@
     .poster-hero::after{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 50% 32%,rgba(15,99,82,.18),transparent 38%),linear-gradient(90deg,rgba(2,7,5,.88),transparent 28%,transparent 72%,rgba(2,7,5,.88));pointer-events:none}
     .poster-stage{position:relative;width:min(100%,992px);margin:0 auto;line-height:0;box-shadow:0 34px 120px rgba(0,0,0,.52);transform:translate3d(0,var(--poster-parallax,0px),0);will-change:transform}
     .poster-image{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
-    .hand-motion{position:absolute;left:51.613%;top:54.912%;width:19.453%;height:auto;z-index:6;transform:translate3d(0,var(--hand-y,0px),0) rotate(var(--hand-rot,0deg));transform-origin:58% 72%;will-change:transform;pointer-events:none;filter:drop-shadow(0 8px 16px rgba(0,0,0,.20))}
-    .signature-finish{position:absolute;left:64.1%;top:68.8%;width:12.8%;height:auto;z-index:5;pointer-events:none;overflow:visible}
-    .signature-finish path{fill:none;stroke:#c98345;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:95;stroke-dashoffset:95;filter:drop-shadow(0 0 4px rgba(201,131,69,.18))}
-    .signature-finish.is-drawn path{animation:signatureDraw .95s cubic-bezier(.22,.7,.25,1) forwards}
-    @keyframes signatureDraw{to{stroke-dashoffset:0}}
+    .hand-motion{position:absolute;left:53.0%;top:57.0%;width:17.8%;height:auto;z-index:7;transform:translate3d(0,var(--hand-y,0px),0) rotate(var(--hand-rot,0deg));transform-origin:60% 72%;will-change:transform;pointer-events:none;filter:drop-shadow(0 5px 8px rgba(0,0,0,.16))}
+    .signature-finish{position:absolute;left:64.7%;top:69.4%;width:12.1%;height:auto;z-index:8;pointer-events:none;overflow:visible}
+    .signature-finish path{fill:none;stroke:#c98345;stroke-width:1.65;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:95;stroke-dashoffset:95;filter:drop-shadow(0 0 4px rgba(201,131,69,.18))}
+    
 
     .poster-link{position:absolute;z-index:8;display:block;border-radius:4px;outline-offset:4px;background:transparent;-webkit-tap-highlight-color:transparent}
     .poster-link:focus-visible{outline:2px solid #e5b87d;background:rgba(229,184,125,.08)}
@@ -346,8 +345,8 @@
     <section class="poster-hero" id="home" aria-label="KATTOO Startbereich">
       <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
       <div class="poster-stage" id="posterStage">
-        <img class="poster-image" src="assets/hero-final.webp" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="992" height="1472">
-        <img class="hand-motion" src="assets/hero-hand-machine.webp" alt="" aria-hidden="true" width="199" height="289">
+        <img class="poster-image" src="assets/hero-final.webp?v=10" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="992" height="1472">
+        <img class="hand-motion" src="assets/hero-hand-machine-v10.webp?v=10" alt="" aria-hidden="true" width="201" height="291">
         <svg class="signature-finish" viewBox="0 0 160 55" aria-hidden="true"><path d="M4 40 C34 25, 64 14, 102 13 C123 13, 142 17, 156 22"/></svg>
         <a class="poster-link hit-home" href="#home" aria-label="Home"></a>
         <a class="poster-link hit-gallery" href="galerie.html" aria-label="Galerie öffnen"></a>
@@ -511,13 +510,13 @@ Liebe Grüße`);
     const vh = innerHeight || 800;
     const progress = Math.max(0, Math.min(1, -rect.top / Math.max(1, rect.height - vh * .35)));
     // One restrained centimetre-like completion movement; no loop.
-    const handY = -Math.min(8, progress * 8);
-    const handRot = -Math.min(1.2, progress * 1.2);
+    const handY = -Math.min(11, progress * 11);
+    const handRot = -Math.min(0.8, progress * 0.8);
     const posterY = Math.max(-8, Math.min(8, -rect.top * .018));
     const bgY = Math.max(-14, Math.min(14, -rect.top * .032));
     hand.style.setProperty('--hand-y', `${handY.toFixed(2)}px`);
     hand.style.setProperty('--hand-rot', `${handRot.toFixed(2)}deg`);
-    if (progress > 0.12) hero.querySelector('.signature-finish')?.classList.add('is-drawn');
+    const finish=hero.querySelector('.signature-finish path'); if(finish){finish.style.strokeDashoffset=String(Math.max(0,95-(progress*120)));}
     stage.style.setProperty('--poster-parallax', `${posterY.toFixed(2)}px`);
     hero.style.setProperty('--bg-parallax', `${bgY.toFixed(2)}px`);
   };

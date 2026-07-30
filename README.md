@@ -90,3 +90,12 @@ Die HTML-Dateien dieser Version verweisen bereits auf diese flache Struktur.
 - `hero-hand-machine.webp` contains only the tightly isolated glove and tattoo machine with transparency.
 - No button, background panel, torso block or signature fragment moves with the hand.
 - The hand moves no more than 8 px and the final signature segment is drawn separately as SVG.
+
+
+## v10 Live-Fix
+- Neues, cache-sicher benanntes Hand-Asset: `assets/hero-hand-machine-v10.webp`
+- UI-/Schattenreste aus dem bewegten Asset entfernt
+- Galerie-Bildpfade korrigiert (`assets/<Dateiname>`)
+- Galerie-Hero abgedunkelt und weichgezeichnet statt grob hochskaliert
+- Beyond-Ink-Bildausschnitt für iPad/iPhone korrigiert
+- Kritische Assets tragen `?v=10`, damit Safari/GitHub nicht die alte Version aus dem Cache verwendet
