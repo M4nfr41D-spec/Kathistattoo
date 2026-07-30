@@ -310,12 +310,18 @@
     .scribe-static{opacity:.98}
     .scribe-dynamic{stroke-dasharray:1;stroke-dashoffset:1}
     .hand-motion{position:absolute;left:0;top:0;width:19.45%;height:auto;z-index:8;transform:translate3d(var(--hand-x,0px),var(--hand-y,0px),0) rotate(var(--hand-rot,0deg));transform-origin:96% 97%;will-change:transform;pointer-events:none;filter:drop-shadow(0 5px 8px rgba(0,0,0,.15))}
-    .poster-link{position:absolute;z-index:20;display:block;border-radius:4px;outline-offset:4px;background:rgba(0,0,0,.001);-webkit-tap-highlight-color:transparent;touch-action:manipulation;pointer-events:auto;cursor:pointer}
+    .poster-link{position:absolute;z-index:24;display:block;border-radius:4px;outline-offset:4px;background:rgba(0,0,0,.001);-webkit-tap-highlight-color:transparent;touch-action:manipulation;pointer-events:auto;cursor:pointer}
     .poster-link:focus-visible{outline:2px solid #e5b87d;background:rgba(229,184,125,.08)}
     .poster-link:active{background:rgba(229,184,125,.055)}
     .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
     .hit-home{left:41.0%;top:2.0%;width:10.8%;height:4.6%}.hit-gallery{left:53.1%;top:2.0%;width:13.0%;height:4.6%}.hit-top-cta{left:67.2%;top:1.2%;width:31.0%;height:5.1%}
-    .hit-booking{left:3.6%;top:67.6%;width:31.8%;height:6.4%}.hit-portfolio{left:34.4%;top:67.6%;width:26.4%;height:6.4%}
+    .hero-real-button{position:absolute;z-index:40;display:flex;align-items:center;justify-content:center;gap:.75em;height:4.55%;padding:0 1.15em;border-radius:2px;text-transform:uppercase;letter-spacing:.075em;font-weight:750;font-size:clamp(7px,1.02vw,11px);line-height:1;white-space:nowrap;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;box-shadow:0 8px 26px rgba(0,0,0,.22);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease}
+    .hero-real-button:hover,.hero-real-button:focus-visible{transform:translateY(-1px);outline:none;box-shadow:0 12px 30px rgba(0,0,0,.30)}
+    .hero-real-button:active{transform:translateY(1px)}
+    .hero-booking-button{left:4.15%;top:63.78%;width:29.35%;border:1px solid rgba(222,164,104,.70);background:linear-gradient(180deg,rgba(45,33,24,.96),rgba(19,20,17,.96));color:#e7b77e}
+    .hero-portfolio-button{left:35.05%;top:63.78%;width:24.05%;border:1px solid rgba(25,159,137,.70);background:linear-gradient(180deg,rgba(6,35,31,.96),rgba(4,18,16,.96));color:#43cbb8}
+    .hero-button-icon{font-size:1.25em;line-height:1}
+    .hero-button-arrow{font-size:1.45em;margin-left:.25em}
     .hero-particles{position:absolute;inset:0;z-index:4;pointer-events:none;opacity:.48;mix-blend-mode:screen}
     @media(max-width:1050px){.poster-hero{padding-top:calc(72px + env(safe-area-inset-top))}.poster-stage{width:min(100%,900px)}}
     @media(max-width:720px){.poster-hero{min-height:auto;padding-top:calc(72px + env(safe-area-inset-top));background:#020705}.poster-hero::after{background:linear-gradient(180deg,rgba(2,7,5,.08),rgba(2,7,5,.12))}.poster-stage{width:100%;box-shadow:none}.hand-motion{filter:none}.hero-particles{opacity:.34}}
@@ -338,7 +344,6 @@
         <a href="#process">Ablauf</a>
         <a href="#booking">Termin</a>
       </nav>
-      <a class="nav-cta" href="#booking">Erstgespräch</a>
       <button class="mobile-toggle" id="menuToggle" type="button" aria-label="Menü öffnen" aria-controls="mainMenu" aria-expanded="false"><span></span></button>
     </div>
   </header>
@@ -347,7 +352,7 @@
     <section class="poster-hero" id="home" aria-label="KATTOO Startbereich">
       <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
       <div class="poster-stage" id="posterStage">
-        <img class="poster-image" src="assets/hero-final.webp?v=13" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="1023" height="1537">
+        <img class="poster-image" src="assets/hero-final.webp?v=14" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="1023" height="1537">
         <svg class="scribe-svg" id="scribeSvg" viewBox="0 0 1023 1537" preserveAspectRatio="none" aria-hidden="true">
           <!-- Existing gold line beneath the signature: east of the needle contact point. -->
           <path class="scribe-static" d="M740 1046 C790 1033 840 1030 890 1036 C920 1040 945 1047 968 1058"/>
@@ -356,12 +361,12 @@
           <!-- Animated continuation: from the eastern contact point toward the southwest. -->
           <path class="scribe-dynamic" id="drawPath" d="M744 1045 C718 1054 694 1065 672 1079 C650 1094 630 1109 606 1120"/>
         </svg>
-        <img class="hand-motion" id="handMotion" src="assets/hero-hand-machine-v13.webp?v=13" alt="" aria-hidden="true" width="760" height="946">
+        <img class="hand-motion" id="handMotion" src="assets/hero-hand-machine-v13.webp?v=14" alt="" aria-hidden="true" width="760" height="946">
         <a class="poster-link hit-home" href="#home" aria-label="Home"><span class="sr-only">Home</span></a>
         <a class="poster-link hit-gallery" href="galerie.html" aria-label="Galerie öffnen"><span class="sr-only">Galerie öffnen</span></a>
         <a class="poster-link hit-top-cta" href="#booking" aria-label="Kostenloses Erstgespräch"><span class="sr-only">Kostenloses Erstgespräch</span></a>
-        <a class="poster-link hit-booking" href="#booking" aria-label="Kostenloses Erstgespräch vereinbaren"><span class="sr-only">Kostenloses Erstgespräch vereinbaren</span></a>
-        <a class="poster-link hit-portfolio" href="galerie.html" aria-label="Portfolio ansehen"><span class="sr-only">Portfolio ansehen</span></a>
+        <a class="hero-real-button hero-booking-button" href="#booking" aria-label="Kostenloses Erstgespräch vereinbaren"><span class="hero-button-icon" aria-hidden="true">▣</span><span>Kostenloses Erstgespräch</span></a>
+        <a class="hero-real-button hero-portfolio-button" href="galerie.html" aria-label="Portfolio ansehen"><span>Portfolio ansehen</span><span class="hero-button-arrow" aria-hidden="true">→</span></a>
       </div>
     </section>
 
