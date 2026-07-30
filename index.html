@@ -327,6 +327,22 @@
     @media(max-width:720px){.poster-hero{min-height:auto;padding-top:calc(72px + env(safe-area-inset-top));background:#020705}.poster-hero::after{background:linear-gradient(180deg,rgba(2,7,5,.08),rgba(2,7,5,.12))}.poster-stage{width:100%;box-shadow:none}.hand-motion{filter:none}.hero-particles{opacity:.28}.hero-real-button{gap:.38em;padding:0 .48em;letter-spacing:.035em;font-size:clamp(6.2px,1.58cqw,8.2px)}.hero-button-icon{font-size:.9em}.hero-button-arrow{font-size:1.05em}.hero-booking-button{left:3.65%;width:30.75%}.hero-portfolio-button{left:34.85%;width:25.15%}}
     @media(prefers-reduced-motion:reduce){.poster-stage,.poster-hero::before{transform:none!important}.hero-particles{display:none}.scribe-dynamic{stroke-dashoffset:0!important}}
 
+
+    /* v21 — kompakter Artist-/Beyond-Ink-Bereich */
+    .artist-intro{padding:92px 0;background:linear-gradient(180deg,rgba(3,8,6,.76),rgba(3,8,6,.90));border-block:1px solid rgba(90,177,147,.10)}
+    .artist-split{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);align-items:stretch;border:1px solid rgba(90,177,147,.20);background:rgba(3,8,6,.66);box-shadow:var(--shadow);overflow:hidden}
+    .artist-visual{position:relative;aspect-ratio:1/1;min-width:0;background:#020403;overflow:hidden}
+    .artist-visual img{display:block;width:100%;height:100%;object-fit:cover;object-position:center}
+    .artist-visual::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,transparent 62%,rgba(3,8,6,.20)),linear-gradient(180deg,transparent 64%,rgba(3,8,6,.26))}
+    .artist-copy{min-width:0;padding:clamp(36px,5vw,72px);display:flex;flex-direction:column;justify-content:center;background:radial-gradient(circle at 100% 0%,rgba(52,149,124,.14),transparent 38%),linear-gradient(145deg,rgba(16,45,36,.23),rgba(3,8,6,.74))}
+    .artist-brand{display:flex;align-items:center;gap:15px;margin-bottom:28px}.artist-brand img{width:62px;height:62px;object-fit:cover;border-radius:50%;border:1px solid rgba(239,191,138,.43);box-shadow:0 0 0 6px rgba(200,143,92,.055)}
+    .artist-brand strong{font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;font-size:28px;letter-spacing:.05em}.artist-brand small{display:block;margin-top:5px;color:var(--copper2);font-size:9px;letter-spacing:.27em;text-transform:uppercase}
+    .artist-copy h2{font-size:clamp(39px,4.7vw,68px);line-height:.95;text-transform:uppercase;margin-bottom:24px}.artist-copy>p{color:#d0c0b0;font-size:16px;line-height:1.92;margin:0}
+    .artist-quote{margin:26px 0 0;padding-left:19px;border-left:1px solid rgba(239,191,138,.45);font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;font-style:italic;font-size:20px;line-height:1.55;color:#e3c6a5}
+    .beyond-box{margin-top:32px;padding-top:27px;border-top:1px solid rgba(90,177,147,.15);display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center}.beyond-box span{display:block;color:var(--copper2);font-size:9px;font-weight:800;text-transform:uppercase;letter-spacing:.25em;margin-bottom:7px}.beyond-box strong{font-family:"Palatino Linotype","Book Antiqua",Georgia,serif;font-size:22px;font-weight:600}
+    @media(max-width:900px){.artist-split{grid-template-columns:1fr}.artist-visual{aspect-ratio:1/1}.artist-copy{padding:42px 30px}.beyond-box{grid-template-columns:1fr}}
+    @media(max-width:520px){.artist-intro{padding:66px 0}.artist-copy{padding:34px 23px}.artist-brand img{width:54px;height:54px}.artist-brand strong{font-size:24px}.artist-copy h2{font-size:clamp(36px,12vw,52px)}}
+
   </style>
 </head>
 <body>
@@ -369,6 +385,23 @@
         <a class="hero-real-button hero-portfolio-button" href="galerie.html" aria-label="Portfolio ansehen"><span>Portfolio ansehen</span><span class="hero-button-arrow" aria-hidden="true">→</span></a>
       </div>
     </section>
+
+    <section id="artist" class="artist-intro">
+      <div class="shell">
+        <div class="artist-split reveal">
+          <div class="artist-visual"><img src="assets/artist-detail.webp" alt="Kathi mit Tattoo-Maschine" loading="lazy" width="1440" height="1440"></div>
+          <div class="artist-copy">
+            <div class="artist-brand"><img src="assets/kattoo-seal.webp" alt="" aria-hidden="true"><div><strong>KATTOO</strong><small>Tattoo Artist</small></div></div>
+            <div class="kicker">Kunst mit Charakter</div>
+            <h2>Gefühl, Präzision und eine eigene Handschrift.</h2>
+            <p>Ein Traum, der mit 16 Jahren begann, ist heute meine Berufung. Ich erschaffe individuelle Tattoos mit Gefühl, Charakter und einer Handschrift, die jedes Motiv zum Unikat macht.</p>
+            <div class="artist-quote">„Jede Idee wird mit Feingefühl zu einem Motiv, das wirklich zur Person passt.“</div>
+            <div class="beyond-box"><div><span>Beyond Ink</span><strong>Malerei, Zeichnung &amp; freie Arbeiten</strong></div><a class="btn ghost" href="beyond-ink.html">Kunstbereich öffnen</a></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <section id="process" class="section">
       <div class="shell">
         <div class="section-title reveal"><div><div class="kicker">Dein Weg zum Tattoo</div><h2>Von der Anfrage bis zur Nachsorge</h2><p>Vier klare Schritte – persönlich, transparent und ohne unnötige Umwege.</p></div></div>
@@ -378,7 +411,6 @@
           <article class="step reveal"><div class="num">03</div><h3>Tattoo</h3><p>Konzentrierte Umsetzung im privaten Studio mit Zeit und voller Aufmerksamkeit.</p></article>
           <article class="step reveal"><div class="num">04</div><h3>Nachsorge</h3><p>Klare Pflegehinweise und Begleitung für eine ruhige, saubere Abheilung.</p></article>
         </div>
-        <div style="text-align:center;margin-top:30px"><a class="btn ghost" href="beyond-ink.html">Malerei &amp; Atelier entdecken</a></div>
       </div>
     </section>
 
