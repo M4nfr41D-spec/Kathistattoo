@@ -298,6 +298,23 @@
       .hero h1{font-size:clamp(42px,16.2vw,64px);letter-spacing:-.055em}
       .hero-claim{font-size:clamp(21px,7.2vw,29px)}
     }
+  
+    /* v8 — approved poster hero with restrained motion */
+    .poster-hero{position:relative;min-height:100svh;padding:calc(82px + env(safe-area-inset-top)) 0 0;overflow:hidden;isolation:isolate;background:#030807}
+    .poster-hero::before{content:"";position:absolute;inset:-7%;z-index:-3;background:linear-gradient(180deg,rgba(2,8,6,.15),rgba(2,8,6,.78)),var(--patina-img) 52% 45%/cover;transform:translate3d(0,var(--bg-parallax,0px),0) scale(1.08);filter:saturate(.92) contrast(1.06)}
+    .poster-hero::after{content:"";position:absolute;inset:0;z-index:-2;background:radial-gradient(circle at 50% 32%,rgba(15,99,82,.18),transparent 38%),linear-gradient(90deg,rgba(2,7,5,.88),transparent 28%,transparent 72%,rgba(2,7,5,.88));pointer-events:none}
+    .poster-stage{position:relative;width:min(100%,992px);margin:0 auto;line-height:0;box-shadow:0 34px 120px rgba(0,0,0,.52);transform:translate3d(0,var(--poster-parallax,0px),0);will-change:transform}
+    .poster-image{display:block;width:100%;height:auto;user-select:none;-webkit-user-drag:none}
+    .hand-motion{position:absolute;left:46.37%;top:53.67%;width:27.72%;height:auto;z-index:5;transform:translate3d(0,var(--hand-y,0px),0);transform-origin:57% 58%;will-change:transform;pointer-events:none;filter:drop-shadow(0 8px 18px rgba(0,0,0,.18))}
+    .poster-link{position:absolute;z-index:8;display:block;border-radius:4px;outline-offset:4px;background:transparent;-webkit-tap-highlight-color:transparent}
+    .poster-link:focus-visible{outline:2px solid #e5b87d;background:rgba(229,184,125,.08)}
+    .hit-home{left:41.4%;top:2.1%;width:10%;height:4.2%}.hit-gallery{left:53.8%;top:2.1%;width:12%;height:4.2%}.hit-top-cta{left:68.4%;top:1.5%;width:29.5%;height:4.5%}
+    .hit-booking{left:4.3%;top:69.1%;width:29.8%;height:4.4%}.hit-portfolio{left:35.0%;top:69.1%;width:23.5%;height:4.4%}
+    .hero-particles{position:absolute;inset:0;z-index:4;pointer-events:none;opacity:.48;mix-blend-mode:screen}
+    @media(max-width:1050px){.poster-hero{padding-top:calc(72px + env(safe-area-inset-top))}.poster-stage{width:min(100%,860px)}.hand-motion{--hand-scale:.98}}
+    @media(max-width:720px){.poster-hero{min-height:auto;padding-top:calc(72px + env(safe-area-inset-top));background:#020705}.poster-hero::after{background:linear-gradient(180deg,rgba(2,7,5,.08),rgba(2,7,5,.12))}.poster-stage{width:100%;box-shadow:none}.hand-motion{filter:none}.hero-particles{opacity:.34}}
+    @media(prefers-reduced-motion:reduce){.poster-stage,.poster-hero::before,.hand-motion{transform:none!important}.hero-particles{display:none}}
+
   </style>
 </head>
 <body>
@@ -321,20 +338,16 @@
   </header>
 
   <main id="top">
-    <section class="hero">
-      <div class="shell hero-grid">
-        <div class="hero-copy reveal show">
-          <div class="eyebrow">Private Tattoo Studio · Custom Work</div>
-          <h1>KATTOO</h1>
-          <div class="hero-claim">Deine Geschichte.<br>Unter die Haut.</div>
-          <div class="hero-line"></div>
-          <p class="lead">Ein Traum, der mit 16 Jahren begann, ist heute meine Berufung. Ich erschaffe individuelle Tattoos mit Gefühl, Charakter und einer Handschrift, die jedes Motiv zum Unikat macht.</p>
-          <div class="hero-actions"><a class="btn primary" href="#booking">Kostenloses Erstgespräch</a><a class="btn ghost" href="galerie.html">Galerie ansehen →</a></div>
-        </div>
-        <aside class="hero-card reveal show" aria-label="Portrait der KATTOO Tattoo Artist">
-          <div class="hero-card-art"><img class="hero-motif" src="assets/hero-motif.svg" alt="" aria-hidden="true"><img class="hero-portrait" src="assets/kattoo-artist.webp" alt="KATTOO Tattoo Artist" width="1800" height="1734"></div>
-          <div class="hero-card-caption"><h3>Ink with intention</h3><p>Persönlich, fokussiert und mit einer Handschrift, die jedes Motiv zum Unikat macht.</p></div>
-        </aside>
+    <section class="poster-hero" id="home" aria-label="KATTOO Startbereich">
+      <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
+      <div class="poster-stage" id="posterStage">
+        <img class="poster-image" src="assets/hero-final.webp" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="992" height="1472">
+        <img class="hand-motion" src="assets/hero-hand-machine.webp" alt="" aria-hidden="true" width="275" height="345">
+        <a class="poster-link hit-home" href="#home" aria-label="Home"></a>
+        <a class="poster-link hit-gallery" href="galerie.html" aria-label="Galerie öffnen"></a>
+        <a class="poster-link hit-top-cta" href="#booking" aria-label="Kostenloses Erstgespräch"></a>
+        <a class="poster-link hit-booking" href="#booking" aria-label="Kostenloses Erstgespräch vereinbaren"></a>
+        <a class="poster-link hit-portfolio" href="galerie.html" aria-label="Portfolio ansehen"></a>
       </div>
     </section>
 
@@ -476,5 +489,61 @@ Liebe Grüße`);
     renderCal();renderSlots();updateSummary();
     const y=$('#year');if(y)y.textContent=new Date().getFullYear();
   </script>
+
+<script>
+(() => {
+  const hero = document.querySelector('.poster-hero');
+  const stage = document.getElementById('posterStage');
+  const hand = hero?.querySelector('.hand-motion');
+  if (!hero || !stage || !hand) return;
+  const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  let ticking = false;
+  const update = () => {
+    ticking = false;
+    if (reduced) return;
+    const rect = hero.getBoundingClientRect();
+    const vh = innerHeight || 800;
+    const progress = Math.max(0, Math.min(1, -rect.top / Math.max(1, rect.height - vh * .35)));
+    // One restrained centimetre-like completion movement; no loop.
+    const handY = -Math.min(10, progress * 10);
+    const posterY = Math.max(-8, Math.min(8, -rect.top * .018));
+    const bgY = Math.max(-14, Math.min(14, -rect.top * .032));
+    hand.style.setProperty('--hand-y', `${handY.toFixed(2)}px`);
+    stage.style.setProperty('--poster-parallax', `${posterY.toFixed(2)}px`);
+    hero.style.setProperty('--bg-parallax', `${bgY.toFixed(2)}px`);
+  };
+  addEventListener('scroll', () => { if (!ticking) { ticking=true; requestAnimationFrame(update); } }, {passive:true});
+  addEventListener('resize', update, {passive:true});
+  update();
+
+  // Very sparse gold dust: perceived depth, not a visible effect layer.
+  const canvas = document.getElementById('heroParticles');
+  if (!canvas || reduced) return;
+  const ctx = canvas.getContext('2d', {alpha:true});
+  let dpr=1,w=0,h=0,particles=[],last=0;
+  const resize = () => {
+    dpr=Math.min(2,devicePixelRatio||1); w=hero.clientWidth; h=hero.clientHeight;
+    canvas.width=Math.round(w*dpr); canvas.height=Math.round(h*dpr); canvas.style.width=w+'px'; canvas.style.height=h+'px';
+    ctx.setTransform(dpr,0,0,dpr,0,0);
+    const count=Math.max(12,Math.min(30,Math.round(w/55)));
+    particles=Array.from({length:count},()=>({x:Math.random()*w,y:Math.random()*h,r:.35+Math.random()*1.05,vx:(Math.random()-.5)*.08,vy:.035+Math.random()*.12,a:.05+Math.random()*.14,tw:Math.random()*6.28,blur:Math.random()<.18}));
+  };
+  const draw = (t) => {
+    const dt=Math.min(32,t-last||16); last=t; ctx.clearRect(0,0,w,h);
+    for(const p of particles){
+      p.x+=p.vx*dt; p.y+=p.vy*dt; p.tw+=dt*.0012;
+      if(p.y>h+12){p.y=-12;p.x=Math.random()*w} if(p.x<-12)p.x=w+12;if(p.x>w+12)p.x=-12;
+      const alpha=p.a*(.72+.28*Math.sin(p.tw));
+      ctx.save(); ctx.globalAlpha=alpha; ctx.fillStyle='#e7aa62';
+      if(p.blur){ctx.translate(p.x,p.y);ctx.rotate(Math.atan2(p.vy,p.vx||.01));ctx.scale(4.5,1);ctx.beginPath();ctx.arc(0,0,p.r,0,Math.PI*2);ctx.fill();}
+      else {ctx.beginPath();ctx.arc(p.x,p.y,p.r,0,Math.PI*2);ctx.fill();}
+      ctx.restore();
+    }
+    requestAnimationFrame(draw);
+  };
+  resize(); addEventListener('resize',resize,{passive:true}); requestAnimationFrame(draw);
+})();
+</script>
+
 </body>
 </html>

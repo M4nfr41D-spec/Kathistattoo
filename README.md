@@ -55,3 +55,30 @@ Den **kompletten Inhalt dieses Ordners** in die Repository-Wurzel hochladen. `in
 ## Status der Bildauswahl
 
 Die enthaltenen Tattoo-Bilder sind eine funktionierende Erstbestückung und vollständig austauschbar. Die finale kuratorische Auswahl kann später ohne Strukturänderung eingespielt werden.
+
+
+## v7 – flache Asset-Struktur für iPad/iPhone
+
+Alle Bilder liegen direkt im Ordner `assets/`. Es werden keine Unterordner für `gallery`, `editorial` oder `artworks` benötigt.
+
+Beispiele:
+
+```text
+assets/C1.webp
+assets/SW1.webp
+assets/artist-at-work.webp
+assets/artist-detail.webp
+assets/ART1.webp
+```
+
+Die HTML-Dateien dieser Version verweisen bereits auf diese flache Struktur.
+
+
+## v8 Motion Baseline
+
+- `assets/hero-final.webp`: approved hero artwork.
+- `assets/hero-hand-machine.webp`: separate, softly feathered hand/machine motion layer.
+- Scroll motion completes the signature by a maximum of 10 px.
+- Background parallax is deliberately limited to 14 px.
+- Gold particles are sparse and disabled with `prefers-reduced-motion`.
+- Gallery now uses a true reflow grid with fade transitions; hidden categories leave no gaps.
