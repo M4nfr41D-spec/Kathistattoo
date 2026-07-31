@@ -89,7 +89,7 @@
     .mobile-toggle{display:none;position:relative;width:46px;height:46px;border:1px solid var(--line);background:rgba(3,8,6,.32);cursor:pointer;z-index:2}
     .mobile-toggle span,.mobile-toggle::before,.mobile-toggle::after{content:"";position:absolute;left:13px;right:13px;height:1px;background:var(--copper2);transition:.25s ease}
     .mobile-toggle span{top:22px}.mobile-toggle::before{top:15px}.mobile-toggle::after{top:29px}
-    .mobile-toggle.active span{opacity:0}.mobile-toggle.active::before{top:22px;transform:rotate(45deg)}.mobile-toggle.active::after{top:22px;transform:rotate(-45deg)}
+    .mobile-toggle.active{border-color:rgba(239,191,138,.58);background:rgba(200,143,92,.10)}.mobile-toggle.active span{opacity:0}.mobile-toggle.active::before{top:22px;transform:rotate(45deg)}.mobile-toggle.active::after{top:22px;transform:rotate(-45deg)}
     .hero{
       min-height:100svh;position:relative;display:grid;align-items:center;padding:128px 0 90px;isolation:isolate;overflow:hidden;
       background:
@@ -252,13 +252,61 @@
     .footer h3{font-size:30px;text-transform:uppercase}
     .footer p,.footer a{color:var(--muted);line-height:1.82;font-size:13px}
     .footer .small-title{font-size:10px;text-transform:uppercase;letter-spacing:.24em;color:var(--copper2);font-weight:800;margin-bottom:12px}
-    .legal{margin-top:42px;padding-top:20px;border-top:1px solid rgba(112,192,164,.08);display:flex;justify-content:space-between;gap:20px;color:#79867b;font-size:11px;text-transform:uppercase;letter-spacing:.13em}
+    .legal{margin-top:42px;padding-top:20px;border-top:1px solid rgba(112,192,164,.08);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px 24px;color:#79867b;font-size:11px;text-transform:uppercase;letter-spacing:.13em}
     .reveal{opacity:0;transform:translateY(26px);transition:opacity .72s ease,transform .72s ease}
     .reveal.show{opacity:1;transform:none}
     @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}.reveal{opacity:1;transform:none;transition:none}.btn,.menu a,.mobile-toggle *{transition:none}}
     @media(max-width:1050px){
-      .menu{position:fixed;inset:0;display:flex;flex-direction:column;justify-content:center;gap:28px;background:rgba(3,8,6,.96);opacity:0;visibility:hidden;transform:translateY(-10px);transition:.25s ease;font-size:16px}
-      .menu.open{opacity:1;visibility:visible;transform:none}
+      .menu{
+        position:fixed;
+        top:calc(76px + env(safe-area-inset-top));
+        right:12px;
+        left:auto;
+        bottom:auto;
+        width:min(320px,calc(100vw - 24px));
+        max-height:calc(100svh - 94px - env(safe-area-inset-top));
+        padding:10px 14px 12px;
+        display:grid;
+        align-items:stretch;
+        gap:0;
+        overflow:auto;
+        background:
+          radial-gradient(circle at 100% 0%,rgba(55,158,132,.15),transparent 42%),
+          linear-gradient(155deg,rgba(8,24,19,.985),rgba(2,8,6,.985));
+        border:1px solid rgba(239,191,138,.28);
+        box-shadow:0 24px 70px rgba(0,0,0,.58);
+        opacity:0;
+        visibility:hidden;
+        pointer-events:none;
+        transform:translateY(-8px) scale(.985);
+        transform-origin:top right;
+        transition:opacity .2s ease,transform .2s ease,visibility .2s ease;
+        font-size:11px;
+        letter-spacing:.18em;
+      }
+      .menu::before{
+        content:"Navigation";
+        padding:7px 14px 10px;
+        color:rgba(239,191,138,.62);
+        font-size:8px;
+        font-weight:800;
+        letter-spacing:.26em;
+        text-transform:uppercase;
+      }
+      .menu a{
+        display:block;
+        padding:14px;
+        border-top:1px solid rgba(90,177,147,.12);
+        opacity:.88;
+      }
+      .menu a::after{display:none}
+      .menu a:active,.menu a:focus-visible{
+        color:var(--copper2);
+        background:rgba(200,143,92,.08);
+        outline:none;
+      }
+      .menu.open{opacity:1;visibility:visible;pointer-events:auto;transform:none}
+      body.menu-open{overflow:auto}
       .nav-cta{display:none}.mobile-toggle{display:block}
       .hero-grid,.split,.booking{grid-template-columns:1fr}
       .hero{min-height:auto;padding-top:150px}
@@ -447,7 +495,7 @@
     <section class="poster-hero" id="home" aria-label="KATTOO Startbereich">
       <canvas class="hero-particles" id="heroParticles" aria-hidden="true"></canvas>
       <div class="poster-stage" id="posterStage">
-        <img class="poster-image" src="assets/hero-final.webp?v=15" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="1023" height="1537">
+        <img class="poster-image" src="assets/hero-final.webp?v=24" alt="KATTOO Tattoo Artist – Deine Geschichte. Unter die Haut." width="1023" height="1537">
         <svg class="scribe-svg" id="scribeSvg" viewBox="0 0 1023 1537" preserveAspectRatio="none" aria-hidden="true">
           <!-- Existing gold line beneath the signature: east of the needle contact point. -->
           <path class="scribe-static" d="M740 1046 C790 1033 840 1030 890 1036 C920 1040 945 1047 968 1058"/>
@@ -518,7 +566,7 @@
             <div class="field"><label for="message">Kurzbriefing</label><textarea id="message" placeholder="Motividee, Platzierung, Größe, Wunschzeitraum..."></textarea></div>
             <div class="selected-summary" id="summary" aria-live="polite">Noch kein Termin gewählt.</div>
             <button class="btn primary full" id="mailButton" type="button">Kostenloses Erstgespräch anfragen</button>
-            <div class="hint">Diese Standalone-Version sendet keine Daten an einen Server. Sie öffnet eine vorbereitete E-Mail an booking@kattoo.at.</div>
+            <div class="hint">Diese Standalone-Version sendet keine Daten an einen Server. Sie öffnet eine vorbereitete E-Mail an booking@kattoo.online.</div>
           </aside>
         </div>
       </div>
@@ -535,10 +583,10 @@
     <div class="shell footer-grid">
       <div><h3>KATTOO</h3><p>Private Tattoo Studio für Custom Work, Blackwork, Fine Line und Ornamental Tattoos. Ruhig. Präzise. Persönlich.</p></div>
       <div><div class="small-title">Studio</div><p>Private Sessions<br>By appointment only<br>Clean &amp; professional</p></div>
-      <div><div class="small-title">Kontakt</div><p><a href="mailto:booking@kattoo.at">booking@kattoo.at</a><br><a href="#booking">Kostenloses Erstgespräch</a><br><a href="galerie.html">Galerie ansehen</a><br><a href="beyond-ink.html">Beyond Ink</a></p></div>
+      <div><div class="small-title">Kontakt</div><p><a href="mailto:booking@kattoo.online">booking@kattoo.online</a><br><a href="#booking">Kostenloses Erstgespräch</a><br><a href="galerie.html">Galerie ansehen</a><br><a href="beyond-ink.html">Beyond Ink</a></p></div>
       <div><div class="small-title">Social</div><p><a href="#" aria-label="Instagram Platzhalter">Instagram</a><br><a href="#" aria-label="TikTok Platzhalter">TikTok</a><br><a href="#" aria-label="Pinterest Platzhalter">Pinterest</a></p></div>
     </div>
-    <div class="shell legal"><span>© <span id="year">2026</span> KATTOO</span><span>Custom tattoos · Private studio · Austria</span></div>
+    <div class="shell legal"><span>© <span id="year">2026</span> KATTOO</span><span>Sankt Martin · Austria</span><span>Designed by M. Foissner</span></div>
   </footer>
 
   <script>
@@ -551,9 +599,25 @@
     addEventListener('scroll',reveal,{passive:true});addEventListener('resize',reveal);reveal();
 
     const menu=$('#mainMenu'),toggle=$('#menuToggle');
-    function closeMenu(){menu?.classList.remove('open');toggle?.classList.remove('active');toggle?.setAttribute('aria-expanded','false');document.body.classList.remove('menu-open')}
-    toggle?.addEventListener('click',()=>{const open=!menu.classList.contains('open');menu.classList.toggle('open',open);toggle.classList.toggle('active',open);toggle.setAttribute('aria-expanded',String(open));document.body.classList.toggle('menu-open',open)});
+    function closeMenu(){
+      menu?.classList.remove('open');
+      toggle?.classList.remove('active');
+      toggle?.setAttribute('aria-expanded','false');
+      toggle?.setAttribute('aria-label','Menü öffnen');
+      document.body.classList.remove('menu-open');
+    }
+    toggle?.addEventListener('click',()=>{
+      const open=!menu.classList.contains('open');
+      menu.classList.toggle('open',open);
+      toggle.classList.toggle('active',open);
+      toggle.setAttribute('aria-expanded',String(open));
+      toggle.setAttribute('aria-label',open?'Menü schließen':'Menü öffnen');
+      document.body.classList.toggle('menu-open',open);
+    });
     menu?.querySelectorAll('a').forEach(a=>a.addEventListener('click',closeMenu));
+    document.addEventListener('pointerdown',e=>{
+      if(menu?.classList.contains('open')&&!menu.contains(e.target)&&!toggle?.contains(e.target)) closeMenu();
+    });
     addEventListener('keydown',e=>{if(e.key==='Escape')closeMenu()});
 
     let view=new Date();view.setDate(1);let selectedDate=null,selectedSlot=null;
@@ -600,7 +664,7 @@ Kurzbriefing:
 ${msg||'—'}
 
 Liebe Grüße`);
-      location.href=`mailto:booking@kattoo.at?subject=${subject}&body=${body}`;
+      location.href=`mailto:booking@kattoo.online?subject=${subject}&body=${body}`;
     });
     renderCal();renderSlots();updateSummary();
     const y=$('#year');if(y)y.textContent=new Date().getFullYear();
