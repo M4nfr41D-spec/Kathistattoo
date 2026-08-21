@@ -1,0 +1,57 @@
+KATTOO GALLERY UPDATE v27
+SOURCE: Tattoo Arbeiten.zip
+
+BLACK BACKGROUND
+- gallery-bg.webp is no longer used by galerie.html
+- page / cards / footer / lightbox use solid black
+- all newly converted assets are RGB WebP with no alpha channel
+
+PRIORITY
+Overall #1: TA25 Cartoon Sleeve
+Overall #2: TA10 Medusa
+Overall #3: TA20 Horus
+Black & Grey #1: TA10 Medusa
+Color & Comic #1: TA25 Cartoon Sleeve
+
+MAPPING
+
+COLOR & COMIC
+01. TA25.webp  Cartoon Sleeve  [Overall 1]
+02. TA28.webp  Groot  [Overall 4]
+03. TA04.webp  Super Mario  [Overall 6]
+04. TA09.webp  Batman  [Overall 8]
+05. TA05.webp  Cartoon Character  [Overall 12]
+06. TA31.webp  Fairy  [Overall 14]
+07. TA07.webp  Leopard & Florals  [Overall 16]
+
+BLACK & GREY
+01. TA10.webp  Medusa  [Overall 2]
+02. TA20.webp  Horus  [Overall 3]
+03. TA13.webp  Egyptian Sleeve  [Overall 5]
+04. TA16.webp  Egyptian Sleeve · Full View  [Overall 7]
+05. TA01.webp  Hyena  [Overall 9]
+06. TA03.webp  Lion · Color Accent  [Overall 10]
+07. TA24.webp  Stag  [Overall 11]
+08. TA02.webp  Hourglass  [Overall 13]
+09. TA18.webp  Rose  [Overall 15]
+10. TA06.webp  Dark Doll  [Overall 17]
+11. TA15.webp  Realistic Eye  [Overall 18]
+12. TA22.webp  Owl  [Overall 19]
+13. TA23.webp  Animal Skull  [Overall 20]
+14. TA08.webp  Chrysanthemum  [Overall 21]
+15. TA12.webp  Africa  [Overall 22]
+16. TA11.webp  Fire Brigade Crest  [Overall 23]
+17. TA17.webp  Illustrative Figure  [Overall 24]
+18. TA21.webp  Egyptian Eye  [Overall 25]
+19. TA27.webp  Spiderweb  [Overall 26]
+
+FINE LINE
+01. TA14.webp  Fine Line Florals  [Overall 27]
+02. TA19.webp  Moon · Lotus · Sun  [Overall 28]
+03. TA29.webp  Memorial Wings & Lettering  [Overall 29]
+
+COVER-UP
+01. TA26.webp  Katze · Vorher / Nachher  [Overall 30]
+02. TA30.webp  Karpfen · Vorher / Nachher  [Overall 31]
+03. CU11.webp  Brustmotiv · Cover-up Ergebnis  [Overall 32]
+04. CU12.webp  Indianerkopf · Cover-up Ergebnis  [Overall 33]
