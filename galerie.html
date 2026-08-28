@@ -21,6 +21,7 @@ const gallery=document.getElementById('gallery');
 const empty=document.getElementById('empty');
 const sentinel=document.getElementById('sentinel');
 const extensions=['webp','jpg','jpeg','png'];
+const assetPrefixes=['assets/',''];
 let queue=[],cursor=0,loaded=0,failed=0,generation=0;
 let resizeTimer=0;
 
@@ -86,17 +87,19 @@ function appendItem(item,buildId,eager){
 
   gallery.appendChild(card);
 
-  let extIndex=0;
+  const baseFile=(item.files?.[0]||item.file);
+  const baseName=baseFile.replace(/\.[^.]+$/,'');
+  const candidates=assetPrefixes.flatMap(prefix=>extensions.map(ext=>`${prefix}${baseName}.${ext}`));
+  let sourceIndex=0;
   const loadNext=()=>{
     if(buildId!==generation){card.remove();return;}
-    if(extIndex>=extensions.length){
+    if(sourceIndex>=candidates.length){
       card.remove();
       failed++;
       checkEmpty();
       return;
     }
-    const baseFile=(item.files?.[0]||item.file);
-    img.src=`assets/${baseFile.replace(/\.[^.]+$/,'')}.${extensions[extIndex++]}`;
+    img.src=candidates[sourceIndex++];
   };
 
   img.onload=()=>{
@@ -153,6 +156,12 @@ const lbPrev=document.getElementById('lbPrev'),lbNext=document.getElementById('l
 let lightboxFiles=[],lightboxIndex=0,lightboxTitle='';
 function showLightboxIndex(){
   const file=lightboxFiles[lightboxIndex];
+  let fallbackUsed=false;
+  lightboxImage.onerror=()=>{
+    if(fallbackUsed){lightboxImage.onerror=null;closeLightbox();return;}
+    fallbackUsed=true;
+    lightboxImage.src=file;
+  };
   lightboxImage.src=`assets/${file}`;
   lightboxImage.alt=lightboxTitle;
   const multi=lightboxFiles.length>1;
@@ -177,7 +186,7 @@ if(galleryYear) galleryYear.textContent=new Date().getFullYear();
 
 async function loadGallery(){
   try{
-    const response=await fetch('assets/gallery-manifest.json',{cache:'no-store'});
+    const response=await fetch('gallery-manifest.json',{cache:'no-store'});
     if(!response.ok) throw new Error(`HTTP ${response.status}`);
     const manifest=await response.json();
     galleryItems=(Array.isArray(manifest)?manifest:(manifest.items||[])).map(item=>{
