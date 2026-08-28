@@ -1,0 +1,30 @@
+(() => {
+  const PHONE='436765174291';
+  const isArt=/beyond-ink|artworks/i.test(location.pathname);
+  const DEFAULT_TEXT=isArt
+    ? 'Hallo Kathi, ich interessiere mich für deine Arbeiten aus Beyond Ink und würde gerne kurz mit dir darüber sprechen.'
+    : 'Hallo Kathi, ich interessiere mich für ein Tattoo und würde gerne kurz mein Projekt mit dir besprechen.';
+  const waUrl=(text=DEFAULT_TEXT)=>`https://wa.me/${PHONE}?text=${encodeURIComponent(text)}`;
+  const icon=`<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M16.02 3.2A12.7 12.7 0 0 0 5.16 22.5L3.3 29l6.66-1.75A12.74 12.74 0 1 0 16.02 3.2Zm0 2.3a10.43 10.43 0 1 1-5.31 19.42l-.52-.3-3.95 1.04 1.06-3.84-.34-.55A10.43 10.43 0 0 1 16.02 5.5Zm-5.18 4.58c-.27 0-.7.1-1.07.5-.37.41-1.4 1.37-1.4 3.34 0 1.97 1.44 3.87 1.64 4.14.2.27 2.83 4.33 6.86 6.07.96.41 1.71.66 2.3.84.96.3 1.84.26 2.53.16.77-.11 2.37-.97 2.7-1.9.34-.94.34-1.74.24-1.91-.1-.17-.37-.27-.78-.48-.4-.2-2.37-1.17-2.74-1.3-.37-.14-.64-.21-.91.2-.27.4-1.04 1.3-1.28 1.57-.23.27-.47.3-.87.1-.41-.2-1.71-.63-3.26-2.02-1.2-1.07-2.02-2.4-2.25-2.8-.24-.41-.03-.63.18-.83.18-.18.4-.47.6-.7.21-.24.28-.41.41-.68.14-.27.07-.5-.03-.7-.1-.21-.91-2.2-1.25-3.01-.33-.8-.67-.69-.91-.7h-.78Z"/></svg>`;
+  const style=document.createElement('style');
+  style.textContent=`
+  .kattoo-wa-nav{display:inline-grid!important;place-items:center;width:38px;height:38px;min-width:38px;border:1px solid rgba(224,180,104,.78)!important;border-radius:50%;color:#f1c887!important;background:linear-gradient(135deg,rgba(18,96,72,.88),rgba(7,31,24,.96));box-shadow:0 0 0 1px rgba(63,168,127,.12),0 6px 22px rgba(0,0,0,.22);transition:.2s ease;padding:0!important;letter-spacing:0!important}
+  .kattoo-wa-nav:hover{transform:translateY(-1px);border-color:#f1c887!important;box-shadow:0 0 22px rgba(58,170,126,.24)}
+  .kattoo-wa-nav svg{width:19px;height:19px;fill:currentColor;display:block}
+  .kattoo-wa-launcher{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:max(18px,env(safe-area-inset-bottom));z-index:180;width:60px;height:60px;border:1px solid rgba(239,191,138,.9);border-radius:50%;display:grid;place-items:center;background:linear-gradient(145deg,#176c52 0%,#0b3d2e 58%,#75502f 100%);color:#f4ca8b;box-shadow:0 16px 48px rgba(0,0,0,.5),0 0 28px rgba(33,159,113,.18);cursor:pointer;transition:.22s ease}
+  .kattoo-wa-launcher:hover{transform:translateY(-2px) scale(1.025);box-shadow:0 18px 52px rgba(0,0,0,.55),0 0 34px rgba(42,183,131,.26)}
+  .kattoo-wa-launcher svg{width:29px;height:29px;fill:currentColor}
+  .kattoo-wa-panel{position:fixed;right:max(18px,env(safe-area-inset-right));bottom:92px;z-index:179;width:min(360px,calc(100vw - 28px));background:linear-gradient(160deg,#091511,#050908);border:1px solid rgba(239,191,138,.45);box-shadow:0 25px 90px rgba(0,0,0,.62);padding:20px;opacity:0;transform:translateY(10px) scale(.98);pointer-events:none;transition:.2s ease;color:#f3e9da}
+  .kattoo-wa-panel.open{opacity:1;transform:none;pointer-events:auto}
+  .kattoo-wa-head{display:flex;gap:12px;align-items:center;margin-bottom:12px}.kattoo-wa-avatar{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;border:1px solid rgba(239,191,138,.5);color:#f2c989;background:linear-gradient(145deg,#176c52,#092b21)}.kattoo-wa-avatar svg{width:21px;height:21px;fill:currentColor}
+  .kattoo-wa-name{font-family:Georgia,serif;font-size:18px}.kattoo-wa-status{font:700 8px/1.2 Inter,system-ui,sans-serif;letter-spacing:.16em;text-transform:uppercase;color:#91cdb4;margin-top:3px}
+  .kattoo-wa-copy{font:400 14px/1.65 Inter,system-ui,sans-serif;color:#c9bcae;margin:0 0 15px}.kattoo-wa-cta{display:flex;align-items:center;justify-content:center;min-height:48px;padding:0 16px;border:1px solid rgba(239,191,138,.62);background:linear-gradient(135deg,#1d7a5e,#0d4937 58%,#8c6138);color:#fff4e1!important;text-transform:none;letter-spacing:.01em;font:800 13px/1 Inter,system-ui,sans-serif;text-decoration:none!important}
+  @media(max-width:700px){.kattoo-wa-launcher{width:56px;height:56px}.kattoo-wa-panel{bottom:86px}.kattoo-wa-nav{width:36px;height:36px;min-width:36px}}`;
+  document.head.appendChild(style);
+  const makeNav=()=>{const nav=document.querySelector('#mainMenu,.links,.menu');if(!nav||nav.querySelector('.kattoo-wa-nav'))return;const a=document.createElement('a');a.className='kattoo-wa-nav';a.href=waUrl();a.target='_blank';a.rel='noopener';a.setAttribute('aria-label','Schreib mir direkt auf WhatsApp');a.innerHTML=icon;nav.appendChild(a)};
+  const panel=document.createElement('div');panel.className='kattoo-wa-panel';panel.id='kattooWhatsAppPanel';panel.setAttribute('role','dialog');panel.setAttribute('aria-label','WhatsApp Kontakt');
+  const copy=isArt?'Du interessierst dich für ein Kunstwerk oder eine freie Arbeit? Schreib mir einfach direkt.':'Du hast eine Motividee? Schick mir kurz Stil, Körperstelle und ungefähre Größe. Ich melde mich persönlich.';
+  panel.innerHTML=`<div class="kattoo-wa-head"><div class="kattoo-wa-avatar">${icon}</div><div><div class="kattoo-wa-name">Schreib mir direkt auf WhatsApp</div><div class="kattoo-wa-status">Kathi · KATTOO</div></div></div><p class="kattoo-wa-copy">${copy}</p><a class="kattoo-wa-cta" href="${waUrl()}" target="_blank" rel="noopener">Jetzt auf WhatsApp schreiben</a>`;
+  const launcher=document.createElement('button');launcher.type='button';launcher.className='kattoo-wa-launcher';launcher.setAttribute('aria-label','Schreib mir direkt auf WhatsApp');launcher.setAttribute('aria-expanded','false');launcher.innerHTML=icon;document.body.append(panel,launcher);
+  const setOpen=(open)=>{panel.classList.toggle('open',open);launcher.setAttribute('aria-expanded',String(open));};launcher.addEventListener('click',()=>setOpen(!panel.classList.contains('open')));document.addEventListener('pointerdown',e=>{if(panel.classList.contains('open')&&!panel.contains(e.target)&&!launcher.contains(e.target))setOpen(false)});document.addEventListener('keydown',e=>{if(e.key==='Escape')setOpen(false)});makeNav();window.KATTOO_WHATSAPP={phone:PHONE,url:waUrl};
+})();
