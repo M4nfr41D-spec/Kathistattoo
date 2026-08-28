@@ -13,7 +13,7 @@
 <footer class="footer"><div class="shell actions"><a class="btn" href="galerie.html">Tattoo-Galerie</a><a class="btn" href="index.html">Zur Hauptseite</a><a class="btn primary" data-wa-art href="https://wa.me/436765174291" target="_blank" rel="noopener">Schreib mir direkt auf WhatsApp</a></div></footer>
 <script src="assets/artworks-data.js"></script><script>
 const all=window.KATTOO_ARTWORKS||[];
-function card(item,cls){const a=document.createElement('article');a.className='art-card '+cls;const img=document.createElement('img');img.loading='lazy';img.decoding='async';img.src='assets/'+item.file;img.alt=item.title+' — KATTOO Beyond Ink';a.appendChild(img);const m=document.createElement('div');m.className='art-meta';m.textContent=item.title;a.appendChild(m);return a}
+function card(item,cls){const a=document.createElement('article');a.className='art-card '+cls;const img=document.createElement('img');img.loading='lazy';img.decoding='async';img.alt=item.title+' — KATTOO Beyond Ink';let fallbackUsed=false;img.onerror=()=>{if(!fallbackUsed){fallbackUsed=true;img.src='assets/'+item.file}else{a.remove()}};img.src=item.file;a.appendChild(img);const m=document.createElement('div');m.className='art-meta';m.textContent=item.title;a.appendChild(m);return a}
 all.filter(x=>x.section==='painting').forEach(x=>document.getElementById('paintings').appendChild(card(x,'painting-card')));
 all.filter(x=>x.section==='drawing').forEach(x=>document.getElementById('drawings').appendChild(card(x,'drawing-card')));
 all.filter(x=>x.section==='study').forEach(x=>document.getElementById('studies').appendChild(card(x,'study-card')));
