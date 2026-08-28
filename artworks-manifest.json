@@ -1,0 +1,285 @@
+{
+  "schemaVersion": "1.0",
+  "title": "Beyond Ink",
+  "language": "de",
+  "sections": {
+    "painting": {
+      "label": "Malerei",
+      "description": "Ausgewählte Arbeiten auf Leinwand – Farbe, Struktur und freie Komposition."
+    },
+    "drawing": {
+      "label": "Ausgewählte Zeichnungen",
+      "description": "Illustrationen, Motive und Arbeiten auf Papier."
+    },
+    "study": {
+      "label": "Skizzen & Studien",
+      "description": "Studien, Experimente und Momentaufnahmen aus dem Zeichenprozess."
+    }
+  },
+  "items": [
+    {
+      "id": "ART01",
+      "file": "ART01.webp",
+      "title": "Verdant Drift",
+      "section": "painting",
+      "width": 1536,
+      "height": 1152
+    },
+    {
+      "id": "ART02",
+      "file": "ART02.webp",
+      "title": "Through the Noise",
+      "section": "painting",
+      "width": 1201,
+      "height": 1536
+    },
+    {
+      "id": "ART03",
+      "file": "ART03.webp",
+      "title": "Molten Orbit",
+      "section": "painting",
+      "width": 1170,
+      "height": 1445
+    },
+    {
+      "id": "ART04",
+      "file": "ART04.webp",
+      "title": "Gravity in Color",
+      "section": "painting",
+      "width": 1170,
+      "height": 1444
+    },
+    {
+      "id": "ART05",
+      "file": "ART05.webp",
+      "title": "Somewhere Else",
+      "section": "painting",
+      "width": 1170,
+      "height": 808
+    },
+    {
+      "id": "ART06",
+      "file": "ART06.webp",
+      "title": "Fractured Grace",
+      "section": "painting",
+      "width": 1170,
+      "height": 1521
+    },
+    {
+      "id": "ART07",
+      "file": "ART07.webp",
+      "title": "Front Row to the End",
+      "section": "drawing",
+      "width": 1273,
+      "height": 1800
+    },
+    {
+      "id": "ART08",
+      "file": "ART08.webp",
+      "title": "Rose in Refrain",
+      "section": "drawing",
+      "width": 1157,
+      "height": 1800
+    },
+    {
+      "id": "ART09",
+      "file": "ART09.webp",
+      "title": "Night Totem",
+      "section": "drawing",
+      "width": 1495,
+      "height": 1536
+    },
+    {
+      "id": "ART10",
+      "file": "ART10.webp",
+      "title": "Amber Sting",
+      "section": "drawing",
+      "width": 1152,
+      "height": 1536
+    },
+    {
+      "id": "ART11",
+      "file": "ART11.webp",
+      "title": "Purple Mischief",
+      "section": "drawing",
+      "width": 1069,
+      "height": 1536
+    },
+    {
+      "id": "ART12",
+      "file": "ART12.webp",
+      "title": "Cut Glass",
+      "section": "drawing",
+      "width": 1536,
+      "height": 1381
+    },
+    {
+      "id": "ART13",
+      "file": "ART13.webp",
+      "title": "Memento Flora",
+      "section": "drawing",
+      "width": 1569,
+      "height": 1800
+    },
+    {
+      "id": "ART14",
+      "file": "ART14.webp",
+      "title": "Wild Totem",
+      "section": "drawing",
+      "width": 1105,
+      "height": 1536
+    },
+    {
+      "id": "ART15",
+      "file": "ART15.webp",
+      "title": "Smoke & Strings",
+      "section": "drawing",
+      "width": 1170,
+      "height": 817
+    },
+    {
+      "id": "ART16",
+      "file": "ART16.webp",
+      "title": "After Midnight",
+      "section": "drawing",
+      "width": 1170,
+      "height": 1542
+    },
+    {
+      "id": "ART17",
+      "file": "ART17.webp",
+      "title": "Untied",
+      "section": "drawing",
+      "width": 1170,
+      "height": 1613
+    },
+    {
+      "id": "ART18",
+      "file": "ART18.webp",
+      "title": "Moon Garden",
+      "section": "drawing",
+      "width": 1170,
+      "height": 1516
+    },
+    {
+      "id": "ART19",
+      "file": "ART19.webp",
+      "title": "Blue Flight",
+      "section": "drawing",
+      "width": 1170,
+      "height": 920
+    },
+    {
+      "id": "ART20",
+      "file": "ART20.webp",
+      "title": "Watcher in Bloom",
+      "section": "drawing",
+      "width": 1170,
+      "height": 1273
+    },
+    {
+      "id": "ART21",
+      "file": "ART21.webp",
+      "title": "Burnt Velvet",
+      "section": "drawing",
+      "width": 1170,
+      "height": 1523
+    },
+    {
+      "id": "ART22",
+      "file": "ART22.webp",
+      "title": "Gloss",
+      "section": "drawing",
+      "width": 1170,
+      "height": 1012
+    },
+    {
+      "id": "ART23",
+      "file": "ART23.webp",
+      "title": "Solar Bloom",
+      "section": "drawing",
+      "width": 1170,
+      "height": 1422
+    },
+    {
+      "id": "ART24",
+      "file": "ART24.webp",
+      "title": "Signal Flow",
+      "section": "drawing",
+      "width": 1170,
+      "height": 1174
+    },
+    {
+      "id": "ART25",
+      "file": "ART25.webp",
+      "title": "Yellow Dialogue",
+      "section": "study",
+      "width": 1536,
+      "height": 985
+    },
+    {
+      "id": "ART26",
+      "file": "ART26.webp",
+      "title": "Still Watching",
+      "section": "study",
+      "width": 1170,
+      "height": 1154
+    },
+    {
+      "id": "ART27",
+      "file": "ART27.webp",
+      "title": "The Look",
+      "section": "study",
+      "width": 1170,
+      "height": 667
+    },
+    {
+      "id": "ART28",
+      "file": "ART28.webp",
+      "title": "Bone Study",
+      "section": "study",
+      "width": 1170,
+      "height": 1563
+    },
+    {
+      "id": "ART29",
+      "file": "ART29.webp",
+      "title": "Off Balance",
+      "section": "study",
+      "width": 1170,
+      "height": 1533
+    },
+    {
+      "id": "ART30",
+      "file": "ART30.webp",
+      "title": "White Guard",
+      "section": "study",
+      "width": 1170,
+      "height": 1530
+    },
+    {
+      "id": "ART31",
+      "file": "ART31.webp",
+      "title": "A Little Dust",
+      "section": "study",
+      "width": 1170,
+      "height": 1496
+    },
+    {
+      "id": "ART32",
+      "file": "ART32.webp",
+      "title": "Signal Lost",
+      "section": "study",
+      "width": 1170,
+      "height": 1503
+    }
+  ],
+  "process": {
+    "file": "beyond-ink-process.webp",
+    "title": "Im Entstehen"
+  },
+  "hero": {
+    "file": "beyond-ink-hero.webp",
+    "secondary": "beyond-ink-artist.webp"
+  }
+}

@@ -1,0 +1,622 @@
+{
+  "schemaVersion": 1,
+  "categories": {
+    "C": "Color & Comic",
+    "SW": "Black & Grey",
+    "LA": "Fine Line",
+    "CU": "Cover-up"
+  },
+  "categoryInference": {
+    "C": "filename starts with C",
+    "SW": "filename starts with SW",
+    "LA": "filename starts with LA",
+    "CU": "filename starts with CU; use only when explicitly confirmed as cover-up"
+  },
+  "items": [
+    {
+      "file": "TA25.webp",
+      "title": "Cartoon Sleeve",
+      "category": "C",
+      "overallRank": 1,
+      "categoryRank": 1
+    },
+    {
+      "file": "TA10.webp",
+      "title": "Medusa",
+      "category": "SW",
+      "overallRank": 2,
+      "categoryRank": 1
+    },
+    {
+      "file": "TA20.webp",
+      "title": "Horus",
+      "category": "SW",
+      "overallRank": 3,
+      "categoryRank": 2
+    },
+    {
+      "file": "TA28.webp",
+      "title": "Groot",
+      "category": "C",
+      "overallRank": 4,
+      "categoryRank": 2
+    },
+    {
+      "file": "TA13.webp",
+      "title": "Egyptian Sleeve",
+      "category": "SW",
+      "overallRank": 5,
+      "categoryRank": 3
+    },
+    {
+      "file": "TA04.webp",
+      "title": "Super Mario",
+      "category": "C",
+      "overallRank": 6,
+      "categoryRank": 3
+    },
+    {
+      "file": "TN01.webp",
+      "title": "Poseidon · Color Accent",
+      "category": "SW",
+      "overallRank": 7,
+      "categoryRank": 4
+    },
+    {
+      "file": "SW6.webp",
+      "title": "Dragon",
+      "category": "SW",
+      "overallRank": 8,
+      "categoryRank": 5
+    },
+    {
+      "file": "TA09.webp",
+      "title": "Batman",
+      "category": "C",
+      "overallRank": 9,
+      "categoryRank": 4
+    },
+    {
+      "file": "TA01.webp",
+      "title": "Hyena",
+      "category": "SW",
+      "overallRank": 10,
+      "categoryRank": 6
+    },
+    {
+      "file": "TA03.webp",
+      "title": "Lion · Color Accent",
+      "category": "SW",
+      "overallRank": 11,
+      "categoryRank": 7
+    },
+    {
+      "file": "SW1.webp",
+      "title": "Time & Skeleton",
+      "category": "SW",
+      "overallRank": 12,
+      "categoryRank": 8
+    },
+    {
+      "file": "TA24.webp",
+      "title": "Stag",
+      "category": "SW",
+      "overallRank": 13,
+      "categoryRank": 9
+    },
+    {
+      "file": "TA31.webp",
+      "title": "Fairy",
+      "category": "C",
+      "overallRank": 14,
+      "categoryRank": 9
+    },
+    {
+      "file": "C3.webp",
+      "title": "Bugs Bunny",
+      "category": "C",
+      "overallRank": 15,
+      "categoryRank": 5
+    },
+    {
+      "file": "C39.webp",
+      "title": "Sonic",
+      "category": "C",
+      "overallRank": 16,
+      "categoryRank": 6
+    },
+    {
+      "file": "TA18.webp",
+      "title": "Rose",
+      "category": "SW",
+      "overallRank": 17,
+      "categoryRank": 12
+    },
+    {
+      "file": "C41.webp",
+      "title": "Watercolor Elephant",
+      "category": "C",
+      "overallRank": 18,
+      "categoryRank": 11
+    },
+    {
+      "file": "C52.webp",
+      "title": "Stitch",
+      "category": "C",
+      "overallRank": 19,
+      "categoryRank": 7
+    },
+    {
+      "file": "C53.webp",
+      "title": "Stitch · Illustrative",
+      "category": "C",
+      "overallRank": 20,
+      "categoryRank": 8
+    },
+    {
+      "file": "C12.webp",
+      "title": "Pin-up",
+      "category": "C",
+      "overallRank": 21,
+      "categoryRank": 10
+    },
+    {
+      "file": "C1.webp",
+      "title": "Hummingbird & Florals",
+      "category": "C",
+      "overallRank": 22,
+      "categoryRank": 12
+    },
+    {
+      "file": "C2.webp",
+      "title": "Butterflies & Florals",
+      "category": "C",
+      "overallRank": 23,
+      "categoryRank": 13
+    },
+    {
+      "file": "TA07.webp",
+      "title": "Leopard & Florals",
+      "category": "C",
+      "overallRank": 24,
+      "categoryRank": 14
+    },
+    {
+      "file": "TA05.webp",
+      "title": "Cartoon Character",
+      "category": "C",
+      "overallRank": 25,
+      "categoryRank": 15
+    },
+    {
+      "file": "C14.webp",
+      "title": "Darth Vader",
+      "category": "C",
+      "overallRank": 26,
+      "categoryRank": 16
+    },
+    {
+      "file": "C42.webp",
+      "title": "Skull Cherries",
+      "category": "C",
+      "overallRank": 27,
+      "categoryRank": 17
+    },
+    {
+      "file": "C28.webp",
+      "title": "Graffiti Character",
+      "category": "C",
+      "overallRank": 28,
+      "categoryRank": 18
+    },
+    {
+      "file": "C15.webp",
+      "title": "Sacred Heart",
+      "category": "C",
+      "overallRank": 29,
+      "categoryRank": 19
+    },
+    {
+      "file": "C19.webp",
+      "title": "Lettering · Red",
+      "category": "C",
+      "overallRank": 30,
+      "categoryRank": 20
+    },
+    {
+      "file": "C30.webp",
+      "title": "Lotus",
+      "category": "C",
+      "overallRank": 31,
+      "categoryRank": 21
+    },
+    {
+      "file": "C4.webp",
+      "title": "Rose & Butterfly",
+      "category": "C",
+      "overallRank": 32,
+      "categoryRank": 22
+    },
+    {
+      "file": "C17.webp",
+      "title": "Geometric Neck Piece",
+      "category": "C",
+      "overallRank": 33,
+      "categoryRank": 23
+    },
+    {
+      "file": "CU6.webp",
+      "title": "Floral Shoulder Piece",
+      "category": "C",
+      "overallRank": 34,
+      "categoryRank": 24
+    },
+    {
+      "file": "SW10A.webp",
+      "files": [
+        "SW10A.webp",
+        "SW10B.webp"
+      ],
+      "title": "Wing · Back & Shoulder",
+      "category": "SW",
+      "overallRank": 35,
+      "categoryRank": 10,
+      "kind": "multi-view"
+    },
+    {
+      "file": "TA02.webp",
+      "title": "Hourglass",
+      "category": "SW",
+      "overallRank": 36,
+      "categoryRank": 11
+    },
+    {
+      "file": "TA06.webp",
+      "title": "Dark Doll",
+      "category": "SW",
+      "overallRank": 37,
+      "categoryRank": 13
+    },
+    {
+      "file": "TA15.webp",
+      "title": "Realistic Eye",
+      "category": "SW",
+      "overallRank": 38,
+      "categoryRank": 14
+    },
+    {
+      "file": "TA22.webp",
+      "title": "Owl",
+      "category": "SW",
+      "overallRank": 39,
+      "categoryRank": 15
+    },
+    {
+      "file": "TA23.webp",
+      "title": "Animal Skull",
+      "category": "SW",
+      "overallRank": 40,
+      "categoryRank": 16
+    },
+    {
+      "file": "LA1.webp",
+      "title": "Floral Mandala",
+      "category": "SW",
+      "overallRank": 41,
+      "categoryRank": 17
+    },
+    {
+      "file": "LA2.webp",
+      "title": "Seahorse Skull",
+      "category": "SW",
+      "overallRank": 42,
+      "categoryRank": 18
+    },
+    {
+      "file": "TA08.webp",
+      "title": "Chrysanthemum",
+      "category": "SW",
+      "overallRank": 43,
+      "categoryRank": 19
+    },
+    {
+      "file": "C18.webp",
+      "title": "Angel",
+      "category": "SW",
+      "overallRank": 44,
+      "categoryRank": 20
+    },
+    {
+      "file": "C13.webp",
+      "title": "Scenic Sleeve",
+      "category": "SW",
+      "overallRank": 45,
+      "categoryRank": 21
+    },
+    {
+      "file": "TA12.webp",
+      "title": "Africa",
+      "category": "SW",
+      "overallRank": 46,
+      "categoryRank": 22
+    },
+    {
+      "file": "TA11.webp",
+      "title": "Fire Brigade Crest",
+      "category": "SW",
+      "overallRank": 47,
+      "categoryRank": 23
+    },
+    {
+      "file": "TA17.webp",
+      "title": "Illustrative Figure",
+      "category": "SW",
+      "overallRank": 48,
+      "categoryRank": 24
+    },
+    {
+      "file": "TA21.webp",
+      "title": "Eye of Horus",
+      "category": "SW",
+      "overallRank": 49,
+      "categoryRank": 25
+    },
+    {
+      "file": "TA27.webp",
+      "title": "Spiderweb",
+      "category": "SW",
+      "overallRank": 50,
+      "categoryRank": 26
+    },
+    {
+      "file": "SW7.webp",
+      "title": "Dark Illustrative",
+      "category": "SW",
+      "overallRank": 51,
+      "categoryRank": 27
+    },
+    {
+      "file": "C8.webp",
+      "title": "Geometric Armband",
+      "category": "SW",
+      "overallRank": 52,
+      "categoryRank": 28
+    },
+    {
+      "file": "SP1.webp",
+      "title": "Skull · Red Accent",
+      "category": "SW",
+      "overallRank": 53,
+      "categoryRank": 29
+    },
+    {
+      "file": "C35.webp",
+      "title": "Blackletter 2008",
+      "category": "SW",
+      "overallRank": 54,
+      "categoryRank": 30
+    },
+    {
+      "file": "C40.webp",
+      "title": "Cross",
+      "category": "SW",
+      "overallRank": 55,
+      "categoryRank": 31
+    },
+    {
+      "file": "C50.webp",
+      "title": "Piston",
+      "category": "SW",
+      "overallRank": 56,
+      "categoryRank": 32
+    },
+    {
+      "file": "C48.webp",
+      "title": "Sword & Florals",
+      "category": "SW",
+      "overallRank": 57,
+      "categoryRank": 33
+    },
+    {
+      "file": "CU3.webp",
+      "title": "Starfish",
+      "category": "SW",
+      "overallRank": 58,
+      "categoryRank": 34
+    },
+    {
+      "file": "TN02.webp",
+      "title": "Compass Star",
+      "category": "SW",
+      "overallRank": 59,
+      "categoryRank": 35
+    },
+    {
+      "file": "TA14.webp",
+      "title": "Fine Line Florals",
+      "category": "LA",
+      "overallRank": 60,
+      "categoryRank": 1
+    },
+    {
+      "file": "TA19.webp",
+      "title": "Moon · Lotus · Sun",
+      "category": "LA",
+      "overallRank": 61,
+      "categoryRank": 2
+    },
+    {
+      "file": "TA29.webp",
+      "title": "Memorial Wings & Lettering",
+      "category": "LA",
+      "overallRank": 62,
+      "categoryRank": 3
+    },
+    {
+      "file": "LA8.webp",
+      "title": "Dragonfly",
+      "category": "LA",
+      "overallRank": 63,
+      "categoryRank": 4
+    },
+    {
+      "file": "C11.webp",
+      "title": "Face & Flower",
+      "category": "LA",
+      "overallRank": 64,
+      "categoryRank": 5
+    },
+    {
+      "file": "LA7.webp",
+      "title": "Octopus",
+      "category": "LA",
+      "overallRank": 65,
+      "categoryRank": 6
+    },
+    {
+      "file": "TN03.webp",
+      "title": "Creation Hands",
+      "category": "LA",
+      "overallRank": 66,
+      "categoryRank": 7
+    },
+    {
+      "file": "TN04.webp",
+      "title": "Signature",
+      "category": "LA",
+      "overallRank": 67,
+      "categoryRank": 8
+    },
+    {
+      "file": "TN05.webp",
+      "title": "444 Flower",
+      "category": "LA",
+      "overallRank": 68,
+      "categoryRank": 9
+    },
+    {
+      "file": "C10.webp",
+      "title": "Minimal Figure",
+      "category": "LA",
+      "overallRank": 69,
+      "categoryRank": 10
+    },
+    {
+      "file": "C20.webp",
+      "title": "Bracelet Lettering",
+      "category": "LA",
+      "overallRank": 70,
+      "categoryRank": 11
+    },
+    {
+      "file": "C22.webp",
+      "title": "Ear Lotus",
+      "category": "LA",
+      "overallRank": 71,
+      "categoryRank": 12
+    },
+    {
+      "file": "C33.webp",
+      "title": "Paw Memorial",
+      "category": "LA",
+      "overallRank": 72,
+      "categoryRank": 13
+    },
+    {
+      "file": "C37.webp",
+      "title": "Books & Lettering",
+      "category": "LA",
+      "overallRank": 73,
+      "categoryRank": 14
+    },
+    {
+      "file": "C58.webp",
+      "title": "Minimal Butterfly",
+      "category": "LA",
+      "overallRank": 74,
+      "categoryRank": 15
+    },
+    {
+      "file": "LA6.webp",
+      "title": "Sisters · Touch-up",
+      "category": "LA",
+      "overallRank": 75,
+      "categoryRank": 16
+    },
+    {
+      "file": "LA10.webp",
+      "title": "Memorial Script",
+      "category": "LA",
+      "overallRank": 76,
+      "categoryRank": 17
+    },
+    {
+      "file": "CU5.webp",
+      "title": "Matching Drinks",
+      "category": "LA",
+      "overallRank": 77,
+      "categoryRank": 18
+    },
+    {
+      "file": "CU7.webp",
+      "title": "Botanical Bracelet",
+      "category": "LA",
+      "overallRank": 78,
+      "categoryRank": 19
+    },
+    {
+      "file": "SP2.webp",
+      "title": "Smiley Pair",
+      "category": "LA",
+      "overallRank": 79,
+      "categoryRank": 20
+    },
+    {
+      "file": "CU2.webp",
+      "title": "Butterflies",
+      "category": "LA",
+      "overallRank": 80,
+      "categoryRank": 21
+    },
+    {
+      "file": "TA26.webp",
+      "title": "Katze · Vorher / Nachher",
+      "kind": "comparison",
+      "category": "CU",
+      "overallRank": 81,
+      "categoryRank": 1
+    },
+    {
+      "file": "TA30.webp",
+      "title": "Karpfen · Vorher / Nachher",
+      "kind": "comparison",
+      "category": "CU",
+      "overallRank": 82,
+      "categoryRank": 2
+    },
+    {
+      "file": "TN06.webp",
+      "title": "Bird · Cover-up Vorher / Nachher",
+      "kind": "comparison",
+      "category": "CU",
+      "overallRank": 83,
+      "categoryRank": 3
+    },
+    {
+      "file": "CU11.webp",
+      "title": "Brustmotiv · Cover-up Ergebnis",
+      "kind": "result",
+      "category": "CU",
+      "overallRank": 84,
+      "categoryRank": 4
+    },
+    {
+      "file": "CU12.webp",
+      "title": "Indianerkopf · Cover-up Ergebnis",
+      "kind": "result",
+      "category": "CU",
+      "overallRank": 85,
+      "categoryRank": 5
+    }
+  ]
+}
