@@ -1,11 +1,26 @@
 {
-  "counts": {
+  "schema_version": "3.0",
+  "runtime_gallery_manifest": "assets/gallery-manifest.json",
+  "category_prefixes": {
+    "C": "Color & Comic",
+    "SW": "Black & Grey",
+    "LA": "Fine Line",
+    "CU": "Cover-up — explicit confirmation only"
+  },
+  "curated_gallery_counts": {
+    "cards_total": 85,
+    "C": 24,
+    "SW": 35,
+    "LA": 21,
+    "CU": 5
+  },
+  "legacy_source_asset_counts": {
     "C": 64,
     "SW": 8,
     "LA": 11,
     "CU": 9
   },
-  "images": [
+  "legacy_import_images": [
     {
       "source": "00844ac8-4c4b-4c30-babe-fb94f7263255.JPG",
       "target": "CU1.webp",
@@ -407,11 +422,454 @@
       "category": "C"
     }
   ],
+  "latest_imports": [
+    {
+      "source": "f350f099-4e1f-4f30-bcac-d97abfcfd6f0.JPG",
+      "target": "SW10A.webp",
+      "motif": "SW10",
+      "category": "SW",
+      "status": "new multi-view motif / primary view"
+    },
+    {
+      "source": "8667a36f-9f8d-44f4-b2a8-e3f43e748e1d.JPG",
+      "target": "SW10B.webp",
+      "motif": "SW10",
+      "category": "SW",
+      "status": "same motif / secondary view"
+    }
+  ],
   "videos": [
     "atelier-video-1.mov",
     "atelier-video-2.mov",
     "atelier-video-3.mp4",
     "atelier-video-4.mp4"
   ],
-  "notes": "Automatischer Erstlauf: breite Vergleichsbilder → CU; Farbsättigung und Kantenstruktur trennen C, SW und LA."
+  "notes": "Gallery runtime is driven by assets/gallery-manifest.json. Filename prefixes remain the category signal for tattoo imports. Cover-up is never inferred automatically. Beyond Ink is kept separate in assets/artworks-manifest.json so the art portfolio cannot be confused with the tattoo gallery.",
+  "runtime_artworks_manifest": "assets/artworks-manifest.json",
+  "beyond_ink": {
+    "artworks_total": 32,
+    "paintings": 6,
+    "selected_drawings": 18,
+    "studies": 8,
+    "hero": "beyond-ink-hero.webp",
+    "secondary_artist_visual": "beyond-ink-artist.webp",
+    "process_visual": "beyond-ink-process.webp",
+    "duplicate_sources_excluded": [
+      {
+        "kept": "A59F515D-B1F0-4644-A469-08597B479E64.jpeg",
+        "duplicate": "49047BE5-6798-4615-B72F-764C9B21103B.JPG"
+      },
+      {
+        "kept": "0D8D97F5-35B3-454B-88A2-E8F83D5F98FC.jpeg",
+        "duplicate": "E642C631-3E65-431E-A3FA-FB67A2AF8F55.jpeg"
+      },
+      {
+        "kept": "24D06955-7775-44C4-9405-FC7C1BBC66C3.jpeg",
+        "duplicate": "E8A3D472-8ABD-4C91-A6CA-C4D71BF773C3.jpeg"
+      }
+    ],
+    "items": [
+      {
+        "source": "19862906-9165-49FA-B47A-C9E85FF35D9C.jpeg",
+        "target": "ART01.webp",
+        "title": "Verdant Drift",
+        "section": "painting"
+      },
+      {
+        "source": "IMG_6090.jpeg",
+        "target": "ART02.webp",
+        "title": "Through the Noise",
+        "section": "painting"
+      },
+      {
+        "source": "0C5CC7F8-A97F-4207-A45B-5D8E3A4BE8CF.jpeg",
+        "target": "ART03.webp",
+        "title": "Molten Orbit",
+        "section": "painting"
+      },
+      {
+        "source": "26005647-65D4-4AF9-A41F-8A394E116B61.jpeg",
+        "target": "ART04.webp",
+        "title": "Gravity in Color",
+        "section": "painting"
+      },
+      {
+        "source": "24D06955-7775-44C4-9405-FC7C1BBC66C3.jpeg",
+        "target": "ART05.webp",
+        "title": "Somewhere Else",
+        "section": "painting"
+      },
+      {
+        "source": "FADB64D4-97D8-4DF4-957B-AA0DA7406183.jpeg",
+        "target": "ART06.webp",
+        "title": "Fractured Grace",
+        "section": "painting"
+      },
+      {
+        "source": "820E2F56-1C43-4F76-B6B8-0917C3DDAC2D.jpeg",
+        "target": "ART07.webp",
+        "title": "Front Row to the End",
+        "section": "drawing"
+      },
+      {
+        "source": "A59F515D-B1F0-4644-A469-08597B479E64.jpeg",
+        "target": "ART08.webp",
+        "title": "Rose in Refrain",
+        "section": "drawing"
+      },
+      {
+        "source": "95C030B3-E102-4B58-812D-EF3A65002AA4.jpeg",
+        "target": "ART09.webp",
+        "title": "Night Totem",
+        "section": "drawing"
+      },
+      {
+        "source": "537984CF-8348-4FF0-813B-D9DE8D71E567.jpeg",
+        "target": "ART10.webp",
+        "title": "Amber Sting",
+        "section": "drawing"
+      },
+      {
+        "source": "FD6EC975-5CFA-431B-8282-80D4959E2152.jpeg",
+        "target": "ART11.webp",
+        "title": "Purple Mischief",
+        "section": "drawing"
+      },
+      {
+        "source": "CA34E618-AA38-48BB-9633-7274B82D14E8.jpeg",
+        "target": "ART12.webp",
+        "title": "Cut Glass",
+        "section": "drawing"
+      },
+      {
+        "source": "A8256329-8212-4199-B91A-2648C982375C.jpeg",
+        "target": "ART13.webp",
+        "title": "Memento Flora",
+        "section": "drawing"
+      },
+      {
+        "source": "B86F3F9A-0D9E-45D9-81E0-139DCBE2F600.jpeg",
+        "target": "ART14.webp",
+        "title": "Wild Totem",
+        "section": "drawing"
+      },
+      {
+        "source": "A6E53E80-187B-418A-BE5B-DA86C6F43FAA.jpeg",
+        "target": "ART15.webp",
+        "title": "Smoke & Strings",
+        "section": "drawing"
+      },
+      {
+        "source": "42A4F2AA-8AE0-4959-9A8B-9F79E64CE36A.jpeg",
+        "target": "ART16.webp",
+        "title": "After Midnight",
+        "section": "drawing"
+      },
+      {
+        "source": "6358EDFA-4760-47E9-B9D4-D9D51B8E9802.jpeg",
+        "target": "ART17.webp",
+        "title": "Untied",
+        "section": "drawing"
+      },
+      {
+        "source": "1A8AD6CF-3D90-4055-9527-B55CECBC9DFA.jpeg",
+        "target": "ART18.webp",
+        "title": "Moon Garden",
+        "section": "drawing"
+      },
+      {
+        "source": "24DAF1AC-2531-44AE-B59C-80A8F717CE91.jpeg",
+        "target": "ART19.webp",
+        "title": "Blue Flight",
+        "section": "drawing"
+      },
+      {
+        "source": "8DC9791F-AB70-4D06-89DD-C147B9E8DED2.jpeg",
+        "target": "ART20.webp",
+        "title": "Watcher in Bloom",
+        "section": "drawing"
+      },
+      {
+        "source": "8D43F7CA-36EE-477C-9572-7D989373B7D4.jpeg",
+        "target": "ART21.webp",
+        "title": "Burnt Velvet",
+        "section": "drawing"
+      },
+      {
+        "source": "3AB023FA-D547-4E57-8D3E-D1D6B5C5A78A.jpeg",
+        "target": "ART22.webp",
+        "title": "Gloss",
+        "section": "drawing"
+      },
+      {
+        "source": "EBF56787-27B3-436B-B72C-9B80F3490056.jpeg",
+        "target": "ART23.webp",
+        "title": "Solar Bloom",
+        "section": "drawing"
+      },
+      {
+        "source": "49574797-E73C-4D98-9EA8-7B3A4EB6E43D.jpeg",
+        "target": "ART24.webp",
+        "title": "Signal Flow",
+        "section": "drawing"
+      },
+      {
+        "source": "D7797DF8-BF85-40C4-AA66-8ED6E977D461.jpeg",
+        "target": "ART25.webp",
+        "title": "Yellow Dialogue",
+        "section": "study"
+      },
+      {
+        "source": "573EC4EE-E52E-47CE-B628-4729FAC92120.jpeg",
+        "target": "ART26.webp",
+        "title": "Still Watching",
+        "section": "study"
+      },
+      {
+        "source": "3F2BFDF9-D039-498E-B3C0-413146273313.jpeg",
+        "target": "ART27.webp",
+        "title": "The Look",
+        "section": "study"
+      },
+      {
+        "source": "0D8D97F5-35B3-454B-88A2-E8F83D5F98FC.jpeg",
+        "target": "ART28.webp",
+        "title": "Bone Study",
+        "section": "study"
+      },
+      {
+        "source": "FBD2AC8E-2B68-4FB8-AD23-6D5BC7614452.jpeg",
+        "target": "ART29.webp",
+        "title": "Off Balance",
+        "section": "study"
+      },
+      {
+        "source": "70EFA08D-01F8-42BC-A174-DF3A09C82547.jpeg",
+        "target": "ART30.webp",
+        "title": "White Guard",
+        "section": "study"
+      },
+      {
+        "source": "053450D3-EC60-49CF-B3DB-6684590BD855.jpeg",
+        "target": "ART31.webp",
+        "title": "A Little Dust",
+        "section": "study"
+      },
+      {
+        "source": "F3181B11-038F-43B0-A465-5EBCDAF36A1D.jpeg",
+        "target": "ART32.webp",
+        "title": "Signal Lost",
+        "section": "study"
+      }
+    ]
+  },
+  "tattoo_zip_source_coverage": {
+    "source": "Tattoo (1).zip",
+    "accounted_for": "25/25",
+    "new_unique_motifs": 6,
+    "mapped_duplicate_or_composite_sources": 19,
+    "items": [
+      {
+        "source": "Unbenanntes_Projekt 10.jpg",
+        "targets": [
+          "TA31.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Fairy"
+      },
+      {
+        "source": "Unbenanntes_Projekt 12.jpg",
+        "targets": [
+          "C39.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Sonic"
+      },
+      {
+        "source": "Unbenanntes_Projekt 13.jpg",
+        "targets": [
+          "SW6.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Dragon"
+      },
+      {
+        "source": "Unbenanntes_Projekt 14.jpg",
+        "targets": [
+          "C15.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Sacred Heart"
+      },
+      {
+        "source": "Unbenanntes_Projekt 15.jpg",
+        "targets": [
+          "TN03.webp"
+        ],
+        "status": "NEW",
+        "motif": "Creation Hands"
+      },
+      {
+        "source": "Unbenanntes_Projekt 16.jpg",
+        "targets": [
+          "C35.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Blackletter 2008"
+      },
+      {
+        "source": "Unbenanntes_Projekt 17.jpg",
+        "targets": [
+          "C50.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Piston"
+      },
+      {
+        "source": "Unbenanntes_Projekt 18.jpg",
+        "targets": [
+          "C52.webp",
+          "C53.webp"
+        ],
+        "status": "DUPLICATE/COMPOSITE",
+        "motif": "Two Stitch motifs"
+      },
+      {
+        "source": "Unbenanntes_Projekt 19.jpg",
+        "targets": [
+          "TN04.webp"
+        ],
+        "status": "NEW",
+        "motif": "Signature"
+      },
+      {
+        "source": "Unbenanntes_Projekt 2.jpg",
+        "targets": [
+          "C18.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Angel"
+      },
+      {
+        "source": "Unbenanntes_Projekt 20.jpg",
+        "targets": [
+          "TN05.webp"
+        ],
+        "status": "NEW",
+        "motif": "444 Flower"
+      },
+      {
+        "source": "Unbenanntes_Projekt 21.jpg",
+        "targets": [
+          "CU5.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Matching Drinks"
+      },
+      {
+        "source": "Unbenanntes_Projekt 22.jpg",
+        "targets": [
+          "TN06.webp"
+        ],
+        "status": "NEW/COVER-UP",
+        "motif": "Bird cover-up"
+      },
+      {
+        "source": "Unbenanntes_Projekt 23.jpg",
+        "targets": [
+          "C19.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Red Lettering"
+      },
+      {
+        "source": "Unbenanntes_Projekt 24.jpg",
+        "targets": [
+          "CU2.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Butterflies"
+      },
+      {
+        "source": "Unbenanntes_Projekt 25.jpg",
+        "targets": [
+          "TA18.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Rose"
+      },
+      {
+        "source": "Unbenanntes_Projekt 26.jpg",
+        "targets": [
+          "C10.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Minimal Figure"
+      },
+      {
+        "source": "Unbenanntes_Projekt 3.jpg",
+        "targets": [
+          "TN02.webp"
+        ],
+        "status": "NEW",
+        "motif": "Compass Star"
+      },
+      {
+        "source": "Unbenanntes_Projekt 4.jpg",
+        "targets": [
+          "C40.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Cross"
+      },
+      {
+        "source": "Unbenanntes_Projekt 5.jpg",
+        "targets": [
+          "LA7.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Octopus"
+      },
+      {
+        "source": "Unbenanntes_Projekt 6.jpg",
+        "targets": [
+          "SP2.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Smiley Pair"
+      },
+      {
+        "source": "Unbenanntes_Projekt 7.jpg",
+        "targets": [
+          "CU12.webp"
+        ],
+        "status": "DUPLICATE/COVER-UP",
+        "motif": "Indian head"
+      },
+      {
+        "source": "Unbenanntes_Projekt 8.jpg",
+        "targets": [
+          "C12.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Pin-up"
+      },
+      {
+        "source": "Unbenanntes_Projekt 9.jpg",
+        "targets": [
+          "LA6.webp"
+        ],
+        "status": "DUPLICATE",
+        "motif": "Sisters touch-up"
+      },
+      {
+        "source": "Unbenanntes_Projekt.jpg",
+        "targets": [
+          "TN01.webp"
+        ],
+        "status": "NEW",
+        "motif": "Poseidon"
+      }
+    ]
+  }
 }

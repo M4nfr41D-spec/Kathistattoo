@@ -550,7 +550,7 @@
 
     <section id="booking" class="section surface">
       <div class="shell">
-        <div class="section-title reveal"><div><div class="kicker">Kalender</div><h2>Termin anfragen</h2><p>Wähle Tag und Zeitslot. Danach öffnet sich eine vorbereitete E-Mail.</p></div></div>
+        <div class="section-title reveal"><div><div class="kicker">Kalender</div><h2>Termin anfragen</h2><p>Wähle Tag und Zeitslot. Danach öffnet sich eine vorbereitete WhatsApp-Nachricht an Kathi.</p></div></div>
         <div class="booking reveal">
           <div class="calendar-card">
             <div class="calendar-head"><div><h3 id="monthLabel">Monat</h3><p>Markierte Tage zeigen verfügbare Beratungsfenster.</p></div><div class="month-nav"><button class="mini-btn" id="prevMonth" type="button" aria-label="Vorheriger Monat">‹</button><button class="mini-btn" id="nextMonth" type="button" aria-label="Nächster Monat">›</button></div></div>
@@ -565,8 +565,8 @@
             <div class="field"><label for="styleSelect">Stilrichtung</label><select id="styleSelect"><option>Ornamental / Mandala</option><option>Blackwork</option><option>Fine Line</option><option>Botanical</option><option>Cover-up / Rework</option><option>Noch offen</option></select></div>
             <div class="field"><label for="message">Kurzbriefing</label><textarea id="message" placeholder="Motividee, Platzierung, Größe, Wunschzeitraum..."></textarea></div>
             <div class="selected-summary" id="summary" aria-live="polite">Noch kein Termin gewählt.</div>
-            <button class="btn primary full" id="mailButton" type="button">Kostenloses Erstgespräch anfragen</button>
-            <div class="hint">Diese Standalone-Version sendet keine Daten an einen Server. Sie öffnet eine vorbereitete E-Mail an booking@kattoo.online.</div>
+            <button class="btn primary full" id="mailButton" type="button">Über WhatsApp anfragen</button>
+            <div class="hint">Diese Standalone-Version sendet keine Daten an einen Server. Deine Angaben werden nur lokal in eine vorbereitete WhatsApp-Nachricht übernommen.</div>
           </aside>
         </div>
       </div>
@@ -583,7 +583,7 @@
     <div class="shell footer-grid">
       <div><h3>KATTOO</h3><p>Private Tattoo Studio für Custom Work, Blackwork, Fine Line und Ornamental Tattoos. Ruhig. Präzise. Persönlich.</p></div>
       <div><div class="small-title">Studio</div><p>Private Sessions<br>By appointment only<br>Clean &amp; professional</p></div>
-      <div><div class="small-title">Kontakt</div><p><a href="mailto:booking@kattoo.online">booking@kattoo.online</a><br><a href="#booking">Kostenloses Erstgespräch</a><br><a href="galerie.html">Galerie ansehen</a><br><a href="beyond-ink.html">Beyond Ink</a></p></div>
+      <div><div class="small-title">Kontakt</div><p><a href="https://wa.me/436765174291?text=Hallo%20Kathi%2C%20ich%20interessiere%20mich%20f%C3%BCr%20ein%20Tattoo." target="_blank" rel="noopener">WhatsApp · +43 676 5174291</a><br><a href="mailto:booking@kattoo.online">booking@kattoo.online</a><br><a href="#booking">Kostenloses Erstgespräch</a><br><a href="galerie.html">Galerie ansehen</a><br><a href="beyond-ink.html">Beyond Ink</a></p></div>
       <div><div class="small-title">Social</div><p><a href="#" aria-label="Instagram Platzhalter">Instagram</a><br><a href="#" aria-label="TikTok Platzhalter">TikTok</a><br><a href="#" aria-label="Pinterest Platzhalter">Pinterest</a></p></div>
     </div>
     <div class="shell legal"><span>© <span id="year">2026</span> KATTOO</span><span>Sankt Martin · Austria</span><span>Designed by M. Foissner</span></div>
@@ -650,10 +650,9 @@
     $('#mailButton')?.addEventListener('click',()=>{
       const name=$('#name').value.trim(),email=$('#email').value.trim(),style=$('#styleSelect').value,msg=$('#message').value.trim();
       if(email&&!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){alert('Bitte eine gültige E-Mail-Adresse eingeben.');$('#email').focus();return;}
-      const subject=encodeURIComponent('Tattoo Anfrage · '+(name||'Neues Projekt'));
-      const body=encodeURIComponent(`Hallo KATTOO,
+      const text=`Hallo Kathi,
 
-ich möchte einen Tattoo-Termin anfragen.
+ich möchte ein Tattoo-Projekt anfragen.
 
 Name: ${name||'—'}
 E-Mail: ${email||'—'}
@@ -663,8 +662,9 @@ Wunschtermin: ${selectedDate?labelDate(selectedDate):'noch offen'} ${selectedSlo
 Kurzbriefing:
 ${msg||'—'}
 
-Liebe Grüße`);
-      location.href=`mailto:booking@kattoo.online?subject=${subject}&body=${body}`;
+Liebe Grüße`;
+      const url=window.KATTOO_WHATSAPP?.url ? window.KATTOO_WHATSAPP.url(text) : `https://wa.me/436765174291?text=${encodeURIComponent(text)}`;
+      window.open(url,'_blank','noopener');
     });
     renderCal();renderSlots();updateSummary();
     const y=$('#year');if(y)y.textContent=new Date().getFullYear();
@@ -780,5 +780,6 @@ Liebe Grüße`);
 })();
 </script>
 
+<script src="assets/contact-widget.js"></script>
 </body>
 </html>

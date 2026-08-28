@@ -1,0 +1,34 @@
+KATTOO FINAL DEPLOY AUDIT v30
+=============================
+
+STRUCTURE
+- Obsolete One-Pager removed.
+- Gallery imagery exists only in /assets.
+- Beyond Ink has its own runtime manifest and cannot contaminate tattoo category assignment.
+- artworks.html remains only as a compatibility redirect.
+
+TATTOO GALLERY
+- Runtime manifest: assets/gallery-manifest.json
+- 85 unique gallery cards.
+- Tattoo (1).zip source coverage: 25/25 accounted for.
+- 6 genuinely new motifs; 19 duplicate/composite source images mapped without duplicate cards.
+- C 24 / SW 35 / LA 21 / CU 5.
+- SW10 uses two views as one motif.
+- Cover-up remains explicit/manual only.
+
+BEYOND INK
+- 32 unique works.
+- 6 paintings / 18 selected drawings / 8 studies.
+- Three exact duplicate artwork uploads excluded.
+- Hero + secondary artist visual + process visual installed.
+
+CONTACT
+- WhatsApp primary: +43 676 5174291.
+- CTA wording: “Schreib mir direkt auf WhatsApp”.
+- Page-specific prefilled messages for tattoo vs. Beyond Ink.
+
+DOMAIN
+- CNAME: kattoo.online
+
+STATUS
+- FINAL DEPLOY CANDIDATE.
