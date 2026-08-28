@@ -1,1 +1,0 @@
-window.KATTOO_ARTWORKS = [];
