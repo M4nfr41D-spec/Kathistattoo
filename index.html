@@ -363,16 +363,15 @@
     .poster-link:active{background:rgba(229,184,125,.055)}
     .sr-only{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip:rect(0,0,0,0)!important;white-space:nowrap!important;border:0!important}
     .hit-home{left:41.0%;top:2.0%;width:10.8%;height:4.6%}.hit-gallery{left:53.1%;top:2.0%;width:13.0%;height:4.6%}.hit-top-cta{left:67.2%;top:1.2%;width:31.0%;height:5.1%}
-    .hero-real-button{position:absolute;z-index:40;display:flex;align-items:center;justify-content:center;gap:.52em;height:4.55%;padding:0 .72em;border-radius:2px;text-transform:uppercase;letter-spacing:.055em;font-weight:750;font-size:clamp(7px,1.02cqw,11px);line-height:1;white-space:nowrap;min-width:0;overflow:hidden;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%;box-shadow:0 8px 26px rgba(0,0,0,.22);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease}
+    .hero-real-button{position:absolute;z-index:40;display:flex;align-items:center;justify-content:center;gap:.58em;height:4.55%;padding:0 .72em;border-radius:2px;text-transform:uppercase;letter-spacing:.07em;font-weight:800;font-size:clamp(8px,1.18cqw,12px);line-height:1;white-space:nowrap;min-width:0;overflow:hidden;cursor:pointer;touch-action:manipulation;-webkit-tap-highlight-color:transparent;-webkit-text-size-adjust:100%;text-size-adjust:100%;box-shadow:0 8px 26px rgba(0,0,0,.22);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease,background .18s ease}
     .hero-real-button:hover,.hero-real-button:focus-visible{transform:translateY(-1px);outline:none;box-shadow:0 12px 30px rgba(0,0,0,.30)}
     .hero-real-button:active{transform:translateY(1px)}
     .hero-booking-button{left:4.05%;top:63.78%;width:30.05%;border:1px solid rgba(222,164,104,.70);background:linear-gradient(180deg,rgba(45,33,24,.96),rgba(19,20,17,.96));color:#e7b77e}
     .hero-portfolio-button{left:35.15%;top:63.78%;width:24.65%;border:1px solid rgba(25,159,137,.70);background:linear-gradient(180deg,rgba(6,35,31,.96),rgba(4,18,16,.96));color:#43cbb8}
-    .hero-button-icon{font-size:1.05em;line-height:1;flex:0 0 auto}
-    .hero-button-arrow{font-size:1.2em;margin-left:.08em;flex:0 0 auto}
+    .hero-free-badge{display:inline-flex;align-items:center;justify-content:center;padding:.36em .52em;border:1px solid rgba(67,203,184,.72);background:rgba(6,52,45,.9);color:#52d6c1;border-radius:2px;font-size:.72em;line-height:1;letter-spacing:.13em;font-weight:900;flex:0 0 auto}
     .hero-particles{position:absolute;inset:0;z-index:4;pointer-events:none;opacity:.48;mix-blend-mode:screen}
     @media(max-width:1050px){.poster-hero{padding-top:calc(72px + env(safe-area-inset-top))}.poster-stage{width:min(100%,900px)}}
-    @media(max-width:720px){.poster-hero{min-height:auto;padding-top:calc(72px + env(safe-area-inset-top));background:#020705}.poster-hero::after{background:linear-gradient(180deg,rgba(2,7,5,.08),rgba(2,7,5,.12))}.poster-stage{width:100%;box-shadow:none}.hand-motion{filter:none}.hero-particles{opacity:.28}.hero-real-button{gap:.38em;padding:0 .48em;letter-spacing:.035em;font-size:clamp(6.2px,1.58cqw,8.2px)}.hero-button-icon{font-size:.9em}.hero-button-arrow{font-size:1.05em}.hero-booking-button{left:3.65%;width:30.75%}.hero-portfolio-button{left:34.85%;width:25.15%}}
+    @media(max-width:720px){.poster-hero{min-height:auto;padding-top:calc(72px + env(safe-area-inset-top));background:#020705}.poster-hero::after{background:linear-gradient(180deg,rgba(2,7,5,.08),rgba(2,7,5,.12))}.poster-stage{width:100%;box-shadow:none}.hand-motion{filter:none}.hero-particles{opacity:.28}.hero-real-button{gap:.42em;padding:0 .52em;letter-spacing:.055em;font-size:clamp(8px,1.82cqw,11px)}.hero-free-badge{font-size:.68em;padding:.34em .46em}.hero-booking-button{left:3.65%;width:30.75%}.hero-portfolio-button{left:34.85%;width:25.15%}}
     @media(prefers-reduced-motion:reduce){.poster-stage,.poster-hero::before{transform:none!important}.hero-particles{display:none}.scribe-dynamic{stroke-dashoffset:0!important}}
 
 
@@ -508,8 +507,8 @@
         <a class="poster-link hit-home" href="#home" aria-label="Home"><span class="sr-only">Home</span></a>
         <a class="poster-link hit-gallery" href="galerie.html" aria-label="Galerie öffnen"><span class="sr-only">Galerie öffnen</span></a>
         <a class="poster-link hit-top-cta" href="#booking" aria-label="Kostenloses Erstgespräch"><span class="sr-only">Kostenloses Erstgespräch</span></a>
-        <a class="hero-real-button hero-booking-button" href="#booking" aria-label="Kostenloses Erstgespräch vereinbaren"><span class="hero-button-icon" aria-hidden="true">▣</span><span>Kostenloses Erstgespräch</span></a>
-        <a class="hero-real-button hero-portfolio-button" href="galerie.html" aria-label="Portfolio ansehen"><span>Portfolio ansehen</span><span class="hero-button-arrow" aria-hidden="true">→</span></a>
+        <a class="hero-real-button hero-booking-button" href="#booking" aria-label="Kostenloses Erstgespräch vereinbaren"><span>Erstgespräch</span><strong class="hero-free-badge" aria-hidden="true">Free</strong></a>
+        <a class="hero-real-button hero-portfolio-button" href="galerie.html" aria-label="Portfolio ansehen"><span>Portfolio</span></a>
       </div>
     </section>
 
